@@ -1,5 +1,7 @@
 <head>
+<link rel="icon" href="../favicon.ico">
 <link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="non-responsive.css" rel="stylesheet">
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
 </head>
 <%@ page contentType="text/html;charset=utf-8"%>
@@ -55,7 +57,8 @@
 
 		</div>
 	</div>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 

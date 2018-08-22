@@ -27,9 +27,27 @@
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="../member/login.jsp">로그인</a></li>
-							<li> <a href="../member/user.jsp"">회원가입</a></li>
-							<li> <a href="../member/logout.jsp">로그아웃</a></li>
+							<table name="top_table">
+   <li>
+ 
+      <li> 
+<%
+         if( session.getAttribute("pid") != null) {
+%>         <%// page로그인하면 로그아웃이 보이고 로그아웃하면 로그인이 나오게하는 액션부분 %>
+         <a href="../member/logout.jsp" class=line>로그아웃</a>
+<%
+         }  else {
+%>
+		<li class="active"><a href="../member/login.jsp" class=line>로그인</a></li>
+<%
+         }
+%>
+      </li>
+      <li> <a href="../member/user.jsp"">회원가입</a></li>
+   </li>
+   
+</table>
+							
 						</ul>
 					</div>
 				</div>
@@ -39,3 +57,5 @@
 	</div>
 
 </body>
+
+

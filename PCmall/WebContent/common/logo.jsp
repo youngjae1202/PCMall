@@ -1,5 +1,6 @@
 <head>
 <link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
 </head>
 <%@ page contentType="text/html;charset=utf-8"%>
 
@@ -22,17 +23,13 @@
 								class="icon-bar"></span> <span class="icon-bar"></span> <span
 								class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="../main/index.jsp"">Web Mall</a>
+						<a class="navbar-brand" href="../main/index.jsp">Web Mall</a>
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li></li>
-							<li class="dropdown open"><a
-								href="../service/index_site.jsp" class="dropdown-toggle">사이트맵</a></li>
 							<li class="active"><a href="../member/login.jsp">로그인</a></li>
-							
-							<li><a href="../member/logout.jsp">회원가입</li>
-							
+							<li> <a href="../member/user.jsp"">회원가입</a></li>
+							<li> <a href="../member/logout.jsp">로그아웃</a></li>
 						</ul>
 					</div>
 				</div>

@@ -1,4 +1,8 @@
 <%@ page contentType="text/html;charset=utf-8"  %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/ie-emulation-modes-warning.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
 <%  
 	String pid = (String) session.getAttribute("pid"); 
 %>
@@ -38,21 +42,34 @@ function MM_showHideLayers() { //v3.0
               </ul>
             </li>
           </ul>
-          <form class="navbar-form navbar-left" role="search">
+          
+          
+          <!-- <tr> 
+             <form name="search_form" action="../common/search_view.jsp" method=post>
+	         <td height=20 width=125 align=center>  
+                   <input type="text" name="srch_word" size=14>
+                   <input type="image" border=0 src="../img/s.gif"></td>
+             </form>
+          </tr> -->
+          
+          
+          <form class="navbar-form navbar-left" name="search_form"  role="search" action="../common/search_view.jsp" method=post>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" name="srch_word" class="form-control" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default" >Submit</button>
           </form>
+          
+          
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+           <li><a href="../product/basket_view.jsp?user_id=<%=pid %>" >장바구니</a></li>
+            <li><a href="#">게시판</a></li>
+           <li><a href="../service/index_site.jsp">마이페이지</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-<%-- <div align=left>
+ <%-- <div align=left>
 <table width=780  border=0 cellspacing=0 cellpadding=0 height=39>
 <tbody valign="top" align="left" bgcolor="#eeeeee">
   <tr valign="middle" align="right" height="19">

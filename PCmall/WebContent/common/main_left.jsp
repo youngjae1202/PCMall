@@ -34,11 +34,11 @@ function MM_showHideLayers() {
 </script>
 
 <body>
-<table width=125 border=1 cellspacing=0 cellpadding=0 align=left height=590>
-<tbody valign=top align=left bgcolor=white>
+<table>
+<tbody>
 <tr> 
-    <td width=125 height=40 valign=top bgcolor=#ffffff >
-      <table width=125 border=1 cellspacing=1 cellpadding=0>
+    <td >
+   <!--    <table width=125 border=1 cellspacing=1 cellpadding=0>
           <tr> 
               <td><img src="../img/title_search.gif" width=125 height=20></td>
           </tr>
@@ -49,7 +49,7 @@ function MM_showHideLayers() {
                    <input type="image" border=0 src="../img/s.gif"></td>
              </form>
           </tr> 
-      </table>
+      </table> -->
 
      <table width=125 border=1 cellspacing=1 cellpadding=0>
      <tr> 

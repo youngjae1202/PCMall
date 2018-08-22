@@ -24,53 +24,53 @@ function MM_showHideLayers() { //v3.0
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown"> 
-            <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">아우터
+            <a href="../product/categoryall.jsp?c=23" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">아우터
             <span class="caret"></span></a>
              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">자켓</a></li>
-                <li><a href="#">가디건</a></li>
-                <li><a href="#">코트</a></li></ul>
+                <li><a href="../product/category.jsp?c=23">자켓</a></li>
+                <li><a href="../product/category.jsp?c=24">가디건</a></li>
+                <li><a href="../product/category.jsp?c=25">코트</a></li></ul>
             </li>
             <li>
             <li class="dropdown"> 
             <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">티셔츠
             <span class="caret"></span></a>
              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">반팔</a></li>
-                <li><a href="#">긴팔</a></li>
-                <li><a href="#">속옷</a></li></ul>
+                <li><a href="../product/category.jsp?c=2">반팔</a></li>
+                <li><a href="../product/category.jsp?c=3">긴팔</a></li>
+                <li><a href="../product/category.jsp?c=4">속옷</a></li></ul>
             </li>
             <li><li class="dropdown"> 
             <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">셔츠
             <span class="caret"></span></a>
              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">정장셔츠</a></li>
-                <li><a href="#">캐쥬얼 셔츠</a></li>
-                <li><a href="#">파자마 셔츠</a></li></ul>
+                <li><a href="../product/category.jsp?c=30">정장셔츠</a></li>
+                <li><a href="../product/category.jsp?c=31">캐쥬얼 셔츠</a></li>
+                <li><a href="../product/category.jsp?c=32">파자마 셔츠</a></li></ul>
             </li>
             <li class="dropdown"> 
             <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">바지
             <span class="caret"></span></a>
              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">스판</a></li>
-                <li><a href="#">청바지</a></li>
-                <li><a href="#">슬랙스</a></li></ul>
+                <li><a href="../product/category.jsp?c=26">스판</a></li>
+                <li><a href="../product/category.jsp?c=27">청바지</a></li>
+                <li><a href="../product/category.jsp?c=28">슬랙스</a></li></ul>
             </li>
             <li class="dropdown"> 
             <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">신발
             <span class="caret"></span></a>
              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">워커</a></li>
-                <li><a href="#">로퍼</a></li>
-                <li><a href="#">스니커즈</a></li></ul>
+                <li><a href="../product/category.jsp?c=34">워커</a></li>
+                <li><a href="../product/category.jsp?c=35">로퍼</a></li>
+                <li><a href="../product/category.jsp?c=37">스니커즈</a></li></ul>
             </li>
             <li class="dropdown"> 
             <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ACC
             <span class="caret"></span></a>
              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">모자</a></li>
-                <li><a href="#">악세사리</a></li>
-                <li><a href="#">벨트</a></li></ul>
+                <li><a href="../product/category.jsp?c=20">모자</a></li>
+                <li><a href="../product/category.jsp?c=21">악세사리</a></li>
+                <li><a href="../product/category.jsp?c=22">벨트</a></li></ul>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">고객센터<span class="caret"></span></a>

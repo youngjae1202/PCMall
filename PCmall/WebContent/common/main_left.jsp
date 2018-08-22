@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8" %>
+<%-- <%-- <%@ page contentType="text/html;charset=utf-8" %>
 
 <script language="JavaScript">
 <!--
@@ -51,10 +51,10 @@ function MM_showHideLayers() {
           </tr> 
       </table> -->
 
-     <table width=125 border=1 cellspacing=1 cellpadding=0>
-     <tr> 
+     <table>
+   <!--   <tr> 
          <td height=22 valign=middle align=center><img src="../img/m_ani.gif" width=125 height=22></td>
-      </tr>
+      </tr> -->
       <tr> 
           <td><a href="../product/categoryall.jsp?c=23" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','../img/nav_1_back.gif',1);MM_showHideLayers('computer','','show','pc','','hide','software','','hide','network','','hide','digital','','hide','etc','','hide')"><img name="Image1" border=0 src="../img/nav_1.gif" width=124 height=30></a></td>
       </tr>
@@ -73,15 +73,16 @@ function MM_showHideLayers() {
        <tr> 
            <td><a href="../product/categoryall.jsp?c=19" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','../img/nav_6_back.gif',1);MM_showHideLayers('computer','','hide','pc','','hide','software','','hide','network','','hide','digital','','hide','etc','','show')"><img name="Image6" border=0 src="../img/nav_6.gif" width=124 height=30></a></td>
       </tr>
-     </table>
+     </table> --%>
 
-<table width=125 border=2 cellspacing=1 cellpadding=0>   
+<!-- 밑에 그림 -->
+<!-- <table width=125 border=2 cellspacing=1 cellpadding=0>   
   <tr> 
       <td><img src="../img/image_case.gif" width=125 height=150></td>
   </tr>
-</table>
+</table> -->
 
-<div id="computer" style="position:absolute; left:123px; top:220px; width:100px; z-index:200; visibility: hidden"> 
+<!-- <div id="computer" style="position:absolute; left:123px; top:220px; width:100px; z-index:200; visibility: hidden"> 
   <table width=110 border=1 cellspacing=1 cellpadding=0 bgcolor="#d59bd7" onMouseOver="MM_showHideLayers('computer','','show','pc','','hide','software','','hide','network','','hide','digital','','hide','etc','','hide')" onMouseOut="MM_showHideLayers('computer','','hide','pc','','hide','software','','hide','network','','hide','digital','','hide','etc','','hide')">
     <tr> 
       <td  onmouseover="this.style.background='#ffff99'" style="padding-top: 2px" onmouseout="this.style.background='#edfaee'" bgcolor=#ffffcc  height=14><a href="../product/category.jsp?c=23" target=_top>&nbsp;&nbsp;브랜드 PC</a></td></tr>
@@ -178,4 +179,4 @@ function MM_showHideLayers() {
 </div>
 </tbody>
 </table>
-</body>
+</body> -->

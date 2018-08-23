@@ -10,5 +10,6 @@
 		<jsp:include page="../common/basic_screen.jsp"    flush="true"/>
 		<jsp:include page="../common/main_right.jsp"      flush="true"/>
 		<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
+		
 </BODY>
 </HTML>

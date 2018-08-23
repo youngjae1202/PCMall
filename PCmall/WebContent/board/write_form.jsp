@@ -1,6 +1,25 @@
-	<%@ page contentType="text/html; charset=utf-8" %>
+
+<%@ page contentType="text/html; charset=utf-8"%>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/ie-emulation-modes-warning.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<style> 
+	table {
 	
-	<html>
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+	margin-left: auto; 
+	margin-right: auto;
+	
+	
+ }
+   th, td {
+  
+  }
+</style>
+<html>
 	<head><title>컴퓨터전문쇼핑몰</title>
 		<LINK href="../common/u3.css" type=text/css rel=STYLESHEET>
 	
@@ -41,26 +60,26 @@
 <form name=bbs_form method=post action="write.jsp">
 	  <table border=1 width=550 height=30 bordercolor=black>
 		<tr>
-			<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>게시물 올리기</b></td>
+			<td align=center bgcolor=black><font size=3 color=white><b>게시물 올리기</b></td>
 		</tr>
 	  </table>
 	  <br>
 <table width=550 border=1>
 	<tr>
-	   <td width=100 align=center bgcolor="#7eaee9">등록자</td>
+	   <td width=100 align=center bgcolor=white>등록자</td>
 	   <td width=170>&nbsp;<input type="text" name="b_name" size=20 value=""></td>
-	   <td width=100 align=center bgcolor="#7eaee9">비밀번호</td>
+	   <td width=100 align=center bgcolor=white>비밀번호</td>
 	   <td width=170>&nbsp;<input type="password" name="pwd" size=15 value=""></td>
 	</tr>	
 	<tr>
-	   <td width=100 align=center bgcolor="#7eaee9">e-mail</td>
+	   <td width=100 align=center bgcolor=white>e-mail</td>
 	   <td  colspan=3>&nbsp;<input type="text" name="b_email" size=30></td>
 	</tr>	
 	<tr>
-	   <td align=center bgcolor="#7eaee9">제 목</td>
+	   <td align=center bgcolor=white>제 목</td>
 	   <td colspan=3>&nbsp;<input type="text" name="b_title" size=40></td>
 	</tr>	
-	   <td align=center bgcolor="#7eaee9">내 용</td>
+	   <td align=center bgcolor=white>내 용</td>
 	   <td colspan=3>
    <table>
       <tr>

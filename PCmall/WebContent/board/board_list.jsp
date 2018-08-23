@@ -1,7 +1,23 @@
 <%@ page contentType="text/html;charset=utf-8" import="java.sql.*,oracle.dbpool.*"  %>
-<srcipt type="text/javascript">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/ie-emulation-modes-warning.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<style>
+  table {
+    width: 90%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+	margin-left: auto; 
+	margin-right: auto;
+ }
+  th, td {
+  
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
+</style>
 
-</srcipt>
 <HTML>
 	<HEAD><TITLE>컴퓨터전문쇼핑몰</TITLE>
 	</HEAD>
@@ -12,19 +28,20 @@
 
 <form name=board_search method=post>
 <br>
-	<table border=1 width=550 height=30 bordercolor=black>
+<div class="table-responsive" >
+<table class="table table-bordered">
 		<tr>
-			<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>자 유 게 시 판</b></td>
+			<td align=center bgcolor=white ><font size=3 ><b>자 유 게 시 판</b></font></td>
 		</tr>
 	</table>
 	<br>
-	<table width=550 border=1 cellspacing=0 cellpadding=0  bordercolor="#C0C0C0">
-		<tr bgcolor="#7eaee9" height=21>
-			<td width=50 align="center" bgcolor="#7EAEE9"><font size="2" >번호</font></td>
-			<td width=230  align="center">제목</td>
-			<td width=100 align="center">날짜</td>
-			<td width=100 align="center">글쓴이</td>
-			<td width=60 align="center">조회수</td>
+	<table border=0 cellspacing=0 cellpadding=0  bordercolor="white">
+		<tr bgcolor=black height=21>
+			<td width=50 align="center" bgcolor=white><font size="2">번호</font></td>
+			<td width=230  align="center" bgcolor=white>제목</td>
+			<td width=100 align="center" bgcolor=white>날짜</td>
+			<td width=100 align="center" bgcolor=white>글쓴이</td>
+			<td width=60 align="center" bgcolor=white>조회수</td>
 		</tr>
 <%!   
 	int pagesize = 20;  // 한페이지당 10개 출력물
@@ -49,6 +66,7 @@
 			pageset.close();
 		}
 
+		//글번호
         int ii = dbcount + 1;
 
 		if(dbcount%pagesize == 0)   
@@ -87,7 +105,7 @@
 			}
             ii--;
  %>
-		<tr height=22 bgcolor=ffffff onMouseOver=this.style.backgroundColor='#FFF8DE'  onMouseOut=this.style.backgroundColor='#FFFFFF'>
+		<tr height=22 bgcolor=#ffffff onMouseOver=this.style.backgroundColor='#FAFAFA'  onMouseOut=this.style.backgroundColor='#FFFFFF'>
 			<td width=50 align=center><%= ii %></td>
 			<td width=230 align="left"><a href='show.jsp?b_id=<%= b_id %>'>
 <%			
@@ -120,8 +138,8 @@
 %>
 
 	</table>
-	<table width=550 bgcolor=000000 border=0 cellpadding=0 cellspacing=0 >
-		<tr bgcolor=ffffff>
+	<table width=550 bgcolor=black border=0 cellpadding=0 cellspacing=0 >
+		<tr bgcolor=white>
 			<td width=10>&nbsp;</td>
 			<td width=350  align=center valign=middle height=30>
   
@@ -132,24 +150,24 @@
 			 int startPage = pageNUM - temp;
 			// [이전] 링크 추가하기
 			if ((startPage-limit)>0){ %>
-				<a href='board_list.jsp?pageNUM=<%=startPage-1%>'>[이전]<a>
+				<a margin = auto href='board_list.jsp?pageNUM=<%=startPage-1%>' color=red ><font color=red>[이전]<a></font>
 <% 
 			}
 			 //페이지 번호 나열하기
 			for(int i=startPage ; i<(startPage+limit);i++){
 				if( i == pageNUM){%>
-					&nbsp;<%=i%>&nbsp;
+				<font color=black>&nbsp;<%=i%>&nbsp;</font>
 <% 
 				} else { 
 %>
-					<a href='board_list.jsp?pageNUM=<%=i%>'><%=i%><a>
+					<a margin = auto href='board_list.jsp?pageNUM=<%=i%>'><%=i%><a>
 <%
 					}
 				 if(i >= pagecount) break;
 			 }
 			 //[다음] 링크 추가
 			if ((startPage+limit)<=pagecount){ %>
-  				<a href='board_list.jsp?pageNUM=<%=startPage+limit%>'>[다음] <a>
+  				<a margin = auto href='board_list.jsp?pageNUM=<%=startPage+limit%>'><font color=red>[다음] <a></font>
 <%
 			}
 %>
@@ -161,6 +179,7 @@
 			<td width=10>&nbsp;</td>
 		</tr>
 	</table>
+	</div>
 </form>
 	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </body>

@@ -12,7 +12,7 @@
         <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 
 <!--  공동구매보기 넣기   -->
-	<center><br>
+	<br>
 	  <table border=1 width=550 height=30 bordercolor=black>
 		<tr>
 			<td align=center bgcolor=0063ce><font size=2 color=white><b>공 동 구 매</b></td>
@@ -93,7 +93,6 @@ Connection con = pool.getConnection("ora8");//인자값 ora8
 	out.println(e);
 }
 %>
-	  </center>
 <!-- 공동구매보기 끝  -->
 	  
    <jsp:include page="../common/basic_copyright.jsp" flush="true"/>

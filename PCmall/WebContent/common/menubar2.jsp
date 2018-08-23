@@ -2,6 +2,8 @@
 
 <%  String pid = (String) session.getAttribute("pid");%>
 
+
+
 <SCRIPT language=javascript>
 function defaultStatus(){
 	var lec = document.all.lecture;
@@ -67,7 +69,6 @@ function MM_swapImage() {
 //-->
 </script>
 <body onLoad="MM_preloadImages('../img/menubar_1_home.gif','../img/menubar_1_company.gif,'../img/menubar_1_member.gif','../img/menubar_1_intro.gif','../img/menubar_1_shopping.gif','../img/menubar_1_basket.gif','../img/menubar_1_mypage.gif','../img/menubar_1_qna.gif');;;">
-<div align="left">
 <table width="790"  border="0" cellspacing="0" cellpadding="0" height="39">
 <tbody valign="top" align="left" bgcolor="#EEEEEE">
   <tr valign="middle" align="right" height="19">

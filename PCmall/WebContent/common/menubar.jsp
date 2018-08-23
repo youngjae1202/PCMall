@@ -7,6 +7,8 @@
 	String pid = (String) session.getAttribute("pid"); 
 %>
 
+
+
 <script language="JavaScript">
 <!--
 function MM_showHideLayers() { //v3.0
@@ -102,7 +104,7 @@ function MM_showHideLayers() { //v3.0
           
           <ul class="nav navbar-nav navbar-right">
            <li><a href="../product/basket_view.jsp?user_id=<%=pid %>" >장바구니</a></li>
-            <li><a href="#">게시판</a></li>
+            <li><a href="../board/board_list.jsp">게시판</a></li>
            <li><a href="../service/index_site.jsp">마이페이지</a></li>
           </ul>
         </div><!--/.nav-collapse -->

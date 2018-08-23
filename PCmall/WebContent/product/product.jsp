@@ -9,7 +9,21 @@
 
 <script language=javascript src="../common/u3.js"></script>
 </head>
-
+<style>
+  table {
+    width: 90%;
+    height : 500;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+	margin-left: auto; 
+	margin-right: auto;
+ }
+  th, td {
+  
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
+</style>
 <body leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
 <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 
@@ -46,8 +60,8 @@
 
 <br><br>
 <table border=0 cellpadding=0 cellspacing=0 width=605 align=center>
-   <tr bgcolor=#7aaad5 height=30>
-       <td  colspan=3 align=center bgcolor="#0000ff"><font color="#ffffff"><b> [<%= name %>]상세 상품 정보</b></font></td>
+   <tr bgcolor=black height=30>
+       <td  colspan=3 align=center bgcolor=black><font color="#ffffff"><b> [<%= name %>]상세 상품 정보</b></font></td>
   </tr>
 </table><br>
 	
@@ -65,7 +79,7 @@
       <td> 
         <table border=1 cellpadding=0 cellspacing=0 width=400>
           <tr> 
-              <td colspan=2 align=center  bgcolor=#00ff66 width=400><font size=3><b><%=name%></b></font></td>
+              <td colspan=2 align=center  bgcolor=black width=400><font size=3 color=white><b><%=name%></b></font></td>
 		 </tr>
           <tr>
                   <td width=90>&nbsp; 상품분류</td>

@@ -1,11 +1,31 @@
 <%@ page  import="java.sql.*,oracle.dbpool.*" contentType="text/html;charset=utf-8" %>
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/ie-emulation-modes-warning.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<style> 
+	table {
+	
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+	margin-left: auto; 
+	margin-right: auto;
+	
+	
+ }
+   th, td {
+  
+  }
+  </style>
 <%!
      String b_name ,b_email,b_title,b_content,b_date,b_ip,mailto;
       int b_id , b_hit , ref=0 ;
  %>
 
 <%
+
+
 try {
       
    //DB풀 메니저 객체 생성 사용
@@ -52,35 +72,37 @@ try {
 <BODY leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>
     <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 
-<center><br>
-  <table border=1 width=550 height=30 bordercolor=black>
+<br>
+<div class="table-responsive" >
+
+  <table class="table" border=1 width=550 height=30 bordercolor=black>
 	<tr>
-		<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>게시물 읽기</b></td>
+		<td align=center bgcolor=black><font size=3 color=#FFFFFF><b>게시물 읽기</b></td>
 	</tr>
   </table>
   <br>
-<table width="550" border="1" cellspacing="0" cellpadding="0">
+<table class="table" width="550" border="1" cellspacing="0" cellpadding="0">
 
 	<tr>
-	   <td width=120 align=center bgcolor="#7eaee9">등록자</td>
-	   <td width=170 bgcolor=ffffff>&nbsp;<%=b_name%></td>
-	   <td width=100 align=center bgcolor="#7eaee9">작성일</td>
-	   <td width=160 bgcolor=ffffff>&nbsp;<%=b_date%>
+	   <td width=120 align=center bgcolor=white>등록자</td>
+	   <td width=170 bgcolor=white>&nbsp;<%=b_name%></td>
+	   <td width=100 align=center bgcolor=white>작성일</td>
+	   <td width=160 bgcolor=white>&nbsp;<%=b_date%>
 	   </td>
 	</tr>	
 	<tr>
-	   <td width=120 align=center bgcolor="#7eaee9">E-mail 주소</td>
-	   <td colspan=3 bgcolor=ffffff>&nbsp;
+	   <td width=120 align=center bgcolor=white>E-mail 주소</td>
+	   <td colspan=3 bgcolor=white>&nbsp;
 	        <a href="mailto:<%=b_email%>"><%=b_email%></a></td>
 	</tr>	
 	<tr>
-	   <td align=center bgcolor="#7eaee9">제 목</td>
-	   <td colspan=3 bgcolor=ffffff>&nbsp;<%=b_title%></td>
+	   <td align=center bgcolor=white>제 목</td>
+	   <td colspan=3 bgcolor=white>&nbsp;<%=b_title%></td>
 	</tr>	
 	<tr>
-	   <td align=center bgcolor="#7eaee9">내 용</td>
-	   <td colspan=3 bgcolor=ffffff>
-	    <table>
+	   <td align=center bgcolor=white>내 용</td>
+	   <td colspan=3 bgcolor=white>
+	    <table class="table">
 	      <tr>
 	         <textarea cols=60 rows=15 name="content"><%=b_content%></textarea>
 	      </tr>
@@ -97,7 +119,7 @@ try {
 	   	</td>
 	  </TR>
 	</table>
-	</center>
+</div>
 		<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </body>
 </html>

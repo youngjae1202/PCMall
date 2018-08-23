@@ -1,5 +1,23 @@
 <%@ page  import="java.sql.*,oracle.dbpool.*" contentType="text/html;charset=utf-8" %>
-
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<script src="../js/ie-emulation-modes-warning.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
+<style> 
+	table {
+	
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+	margin-left: auto; 
+	margin-right: auto;
+	
+	
+ }
+   th, td {
+  
+  }
+</style>
 <%
  //DB풀 메니저 객체 생성 사용
    DBConnectionManager pool = DBConnectionManager.getInstance();
@@ -68,13 +86,14 @@ function go_reply()
 <BODY leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>
     <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 <br>
-  <table border=1 width=550 height=30 bordercolor=black>
+<div class="table-responsive" >
+  <table class="table" border=1 width=550 height=30 bordercolor=black>
 	<tr>
 		<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>게시물 답변</b></td>
 	</tr>
   </table><br>
 
-<table width="550" border="1" cellspacing="0" cellpadding="0">
+<table class="table" width="550" border="1" cellspacing="0" cellpadding="0">
 
 <form method="post" name="reply_form" action="reply.jsp">
   <input type="hidden" name="b_id" value="<%=b_id%>">
@@ -83,9 +102,9 @@ function go_reply()
   <input type="hidden" name="level" value="<%=level%>">
 
 	<tr>
-	   <td width=110 align=center bgcolor="#7eaee9">등록자</td>
-	   <td width=180 bgcolor=ffffff>&nbsp;<input type="text" name="name" size=20></td>
-	   <td width=100 align=center bgcolor="#7eaee9">비밀번호</td>
+	   <td width=110 align=center bgcolor=white>등록자</td>
+	   <td width=160 bgcolor=ffffff>&nbsp;<input type="text" name="name" size=20></td>
+	   <td width=100 align=center bgcolor=white>비밀번호</td>
 	   <td width=160 bgcolor=ffffff>&nbsp;<input type="password" name="pwd" size=15 value="" ></td>
 	</tr>	
 	<tr>
@@ -99,7 +118,7 @@ function go_reply()
 	<tr>
 	   <td align=center bgcolor="#7eaee9">내 용</td>
 	   <td  colspan=3 bgcolor=ffffff>
-           <table>
+           <table class="table">
 		      <tr>
 		        <td><textarea cols=58 rows=15 name="body"><%=b_content%></textarea></td>
 		      </tr>
@@ -117,6 +136,7 @@ function go_reply()
     </TD>
 	</TR>
 </TABLE>
+</div>
 		<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </body>
 </html>

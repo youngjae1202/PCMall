@@ -18,6 +18,10 @@
    th, td {
   
   }
+  box{
+    vertical-align: middle;
+  
+  }
 </style>
 <html>
 	<head><title>컴퓨터전문쇼핑몰</title>
@@ -58,18 +62,20 @@
 
 <br>
 <form name=bbs_form method=post action="write.jsp">
-	  <table border=1 width=550 height=30 bordercolor=black>
+<div class="table-responsive" >
+
+	  <table class="table" border=1 width=550 height=30 bordercolor=black>
 		<tr>
 			<td align=center bgcolor=black><font size=3 color=white><b>게시물 올리기</b></td>
 		</tr>
 	  </table>
 	  <br>
-<table width=550 border=1>
+<table class="table" width=550 border=1>
 	<tr>
-	   <td width=100 align=center bgcolor=white>등록자</td>
-	   <td width=170>&nbsp;<input type="text" name="b_name" size=20 value=""></td>
+	   <td width=100 align=center bgcolor=white margin=auto>등록자</td>
+	   <td width=160>&nbsp;<input class=box type="text" name="b_name" size=20 value=""></td>
 	   <td width=100 align=center bgcolor=white>비밀번호</td>
-	   <td width=170>&nbsp;<input type="password" name="pwd" size=15 value=""></td>
+	   <td width=160>&nbsp;<input class=box type="password" name="pwd" size=15 value=""></td>
 	</tr>	
 	<tr>
 	   <td width=100 align=center bgcolor=white>e-mail</td>
@@ -81,7 +87,7 @@
 	</tr>	
 	   <td align=center bgcolor=white>내 용</td>
 	   <td colspan=3>
-   <table>
+   <table class="table">
       <tr>
          <td><textarea cols=60 rows=15 name="b_content"></textarea></td>
       </tr>
@@ -94,6 +100,7 @@
 	  </TR>
 
 </TABLE>
+</div>
 </form>
 
 			<jsp:include page="../common/basic_copyright.jsp" flush="true"/>

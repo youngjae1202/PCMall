@@ -1,12 +1,37 @@
 <%@ page contentType="text/html;charset=utf-8" import="java.sql.*,oracle.dbpool.*" %>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <table align=left border =1 width=450 cellpadding=0 cellspacing=0 bgcolor=#ffffff>
-	<tr>
-		<td><table align=center border=0 width=450  cellpadding=0 cellspacing=0 bgcolor=#ffffff><div align=left><img src="../img/bg-img1.gif" width=450 height=121 ></div></table></td>
-	</tr>
+	<div id = "myCarousel" class = "carousel slide">
+   
+   <!-- Carousel indicators -->
+   <ol class = "carousel-indicators">
+      <li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
+      <li data-target = "#myCarousel" data-slide-to = "1"></li>
+      <li data-target = "#myCarousel" data-slide-to = "2"></li>
+   </ol>   
+   
+   <!-- Carousel items -->
+   <div class = "carousel-inner">
+      <div class = "item active">
+         <img src = "../img/title_newproduct.gif" alt = "First slide">
+      </div>
+      
+      <div class = "item">
+         <img src = "../img/title_newproduct.gif" alt = "Second slide">
+      </div>
+      
+      <div class = "item">
+         <img src = "" alt = "Third slide">
+      </div>
+   </div>
+   
+   <!-- Carousel nav -->
+   <a class = "carousel-control left" href = "#myCarousel" data-slide = "prev">&lsaquo;</a>
+   <a class = "carousel-control right" href = "#myCarousel" data-slide = "next">&rsaquo;</a>
+   
+</div> 
 	<!-- 최신상품 출력  -->
 	<tr>
 		<div align=left><td bgcolor=white><img src="../img/title_newproduct.gif"></div></td>
@@ -195,7 +220,7 @@
 </td>
 
 <!-- 추천상품(오른쪽 메뉴) -->
-<td valign=top width=180>
+<!-- <td valign=top width=180>
 <table border=0 cellpadding=0 cellspacing=0 width=175>
 	<tr><div align=left>
 		<td bgcolor=white><img src="../img/title_hitproduct.gif"></div></td>
@@ -205,7 +230,7 @@
 <table border = 0 cellPadding=0 cellSpacing=0 width=170>
 	<tr>
 		<td colspan=3 width=141 height=1 bgcolor="#c4beb7">
-	</tr>
+	</tr> -->
 <%
 	try {
 		String name,company_id,expression,photo,code;

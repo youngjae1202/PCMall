@@ -5,6 +5,15 @@
 <link rel="stylesheet" media="screen"
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
+<style>
+div{
+	margin: auto;
+}
+table{
+	margin: auto;
+}
+</style>
+
 <div class="container">
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
@@ -40,74 +49,77 @@
 	</div>
 </div>
 
-<!-- 최신상품 출력  -->
-<tr>
-	<table align="center" width="100%" >
-		<div align=left>
-			<td bgcolor=white><img src="../img/title_newproduct.gif">
+
+<div class=inline>
+	<!-- 최신상품 출력  -->
+	<table align = center width="100%">
+		<div align=center>
+			<td bgcolor=white><img src="../img/title_newproduct.gif" style="margin-left: auto; margin-right: auto; display: block;">
 		</div>
 	</table>
-</tr>
 
-<tr>
-	<td width=450>
-		<table width=435 border=0 cellpadding=1 cellspacing=1>
-			<tr>
-				<%
-					try {
-						String name, company_id, expression, photo;
-						int id, price;
+	<table>
+		<tr>
+			<td width=450>
+				<table width=435 border=0 cellpadding=1 cellspacing=1>
+					<tr>
+						<%
+							try {
+								String name, company_id, expression, photo;
+								int id, price;
 
-						DBConnectionManager pool = DBConnectionManager.getInstance();
-						Connection con = pool.getConnection("ora8");
-						Statement stmt = con.createStatement();
-						ResultSet rs = stmt.executeQuery("select id,name,price,photo from product where id between 49 and 51");
-						int flag = 0;
-						while (rs.next()) {
-							id = rs.getInt(1);
-							name = rs.getString(2);
-							price = rs.getInt(3);
-							photo = rs.getString(4);
-				%>
-				<!-- 표시 테이블  -->
-				<td>
-					<table width=145 border=0 cellpadding=1 cellspacing=2 align=center>
-						<tr>
-							<td colspan=2 align=center><a
-								href="../product/product.jsp?i=<%=id%>"> <img
-									src="../product/image/<%=photo%>" width=90 height=90 border=0></a></td>
-						</tr>
-						<tr>
-							<td width=145><font color=blue>&nbsp;<a
-									href="../product/product.jsp?i=<%=id%>">[<%=name%>]
-								</a></font></td>
-						</tr>
-						<tr>
-							<td><c:set var="fmtPrice" value="<%=price%>" /> <font
-								color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }"
-										pattern="#,###" />&nbsp;원]
-							</font></td>
-						</tr>
-					</table>
-				</td>
-				<%
-					}
-						rs.close();
-						stmt.close();
-						pool.freeConnection("ora8", con);
-					} catch (Exception e) {
-						out.println(e);
-					}
-				%>
-			</tr>
-		</table>
-	</td>
-</tr>
-
+								DBConnectionManager pool = DBConnectionManager.getInstance();
+								Connection con = pool.getConnection("ora8");
+								Statement stmt = con.createStatement();
+								ResultSet rs = stmt.executeQuery("select id,name,price,photo from product where id between 49 and 51");
+								int flag = 0;
+								while (rs.next()) {
+									id = rs.getInt(1);
+									name = rs.getString(2);
+									price = rs.getInt(3);
+									photo = rs.getString(4);
+						%>
+						<!-- 표시 테이블  -->
+						<td>
+							<table width=145 border=0 cellpadding=1 cellspacing=2
+								align=center>
+								<tr>
+									<td colspan=2 align=center><a
+										href="../product/product.jsp?i=<%=id%>"> <img
+											src="../product/image/<%=photo%>" width=90 height=90 border=0></a></td>
+								</tr>
+								<tr>
+									<td width=145><font color=blue>&nbsp;<a
+											href="../product/product.jsp?i=<%=id%>">[<%=name%>]
+										</a></font></td>
+								</tr>
+								<tr>
+									<td><c:set var="fmtPrice" value="<%=price%>" /> <font
+										color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }"
+												pattern="#,###" />&nbsp;원]
+									</font></td>
+								</tr>
+							</table>
+						</td>
+						<%
+							}
+								rs.close();
+								stmt.close();
+								pool.freeConnection("ora8", con);
+							} catch (Exception e) {
+								out.println(e);
+							}
+						%>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
 <!-- 베스트 상품 -->
 <tr>
 	<div align=left>
-		<td bgcolor=white><img src="../img/title_bestproduct.gif">
+		<td bgcolor=white><img src="../img/title_bestproduct.gif" style="margin-left: auto; margin-right: auto; display: block;">
 	</div>
 	</td>
 </tr>
@@ -245,7 +257,7 @@
 <!-- 추천상품 -->
 <tr>
 	<div align=left>
-		<td bgcolor=white><img src="../img/title_hitproduct.gif">
+		<td bgcolor=white><img src="../img/title_hitproduct.gif" style="margin-left: auto; margin-right: auto; display: block;">
 	</div>
 	</td>
 </tr>

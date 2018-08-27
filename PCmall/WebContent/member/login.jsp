@@ -1,7 +1,17 @@
 <%@ page contentType="text/html;charset=utf-8"%>
-<html>
+<HTML>
 <HEAD>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
 <TITLE>로그온폼</TITLE>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="signin.css" rel="stylesheet">
+<script src="../js/ie-emulation-modes-warning.js"></script>
+<script src="../js/ie10-viewport-bug-workaround.js"></script>
 <LINK href="../common/u3.css" type=text/css rel=STYLESHEET>
 <script language="JavaScript">
 	function checkInput() {
@@ -22,17 +32,36 @@
 </script>
 </HEAD>
 
-<body leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>
+<BODY>
 	<jsp:include page="../common/basic_screen.jsp" flush="true" />
+      <form class="form-signin" name="fname" method="post" action="login_ok.jsp">
+        <div class="container">
+        <table width="1536" border="1" height="500">
+        <div align="center">
+        <h2 class="form-signin-heading" color="#ffffff">WebMall</h2>
+        </div>
+        <label for="inputEmail" class="sr-only"></label>
+        <input type="text" name="uid" id="inputEmail" name="uid" class="form-control" placeholder="ID" 
+        onkeypress="if(event.keyCode==13) {checkInput(); return false;}" >
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="pwd" id="inputPassword" class="form-control" placeholder="Password"
+        onkeypress="if(event.keyCode==13) {checkInput(); return false;}" >
+        <input class="btn btn-lg btn-primary btn-block" type="button" value="Login" OnClick="checkInput();">
+        <input class="btn btn-lg btn-primary btn-block" type="reset" value="Cancle" OnClick="checkInput();">
+	
+       </table>
+     </div> 
+      </form> 
 
+     
 	<!--상단테이블과 메뉴테이블 끝-->
 	<br>
 	<br>
-	<form name="fname" method="post" action="login_ok.jsp">
-		<table width="480" border="1" cellspacing="0" cellpadding="0"
-			height="25">
-			<tr>
-				<td bgcolor="#0000ff" height="28">
+	 <form><!--name="fname" method="post" action="login_ok.jsp"  -->
+		<table width="1536" cellspacing="0" cellpadding="0"
+			height="100">
+			 <tr>
+		<!-- 		<td bgcolor="#0000ff" height="28">
 					<div align="center">
 						<font color="#ffffff"><b>회 원 로 그 인</b></font>
 					</div>
@@ -59,22 +88,20 @@
 								OnClick="checkInput();"><input type="reset" value="취 소"></td>
 						</tr>
 					</table>
+				</td>  
+			</tr> -->
+			<tr>
+				<td bgcolor="#ffffff" align=center height="100" width="100">
+					 <a href="user.jsp"><font color="#ff7508">아이디 찾기</font></a>&nbsp;&nbsp;
+					<a href="user.jsp"><font color="#ff7508">비밀번호 찾기</font></a>&nbsp;&nbsp;
+				 <a href="user.jsp"><font color="#ff7508">회원가입</font></a>&nbsp;
 				</td>
 			</tr>
-			<tr>
-				<td bgcolor="#ffffff" align=center height="120"><br> <br>
-					<p>
-						<a href="findId.jsp"><font color="#ff7508">아이디(ID)와
-								패스워드를 찾으시겠습니까?</font></a><br>
-						<br>
-					</p>
-					<p>
-						아이디가 없으신 분은 <a href="user.jsp"><font color="#ff7508">회원가입</font></a>을
-						하시기 바랍니다.<br> <br> <br>
-					</p></td>
-			</tr>
 		</table>
-	</form>
+	</form> 
+<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </body>
-</html>
+
+<!-- login.ok --></html> 
+
 

@@ -6,15 +6,16 @@
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
 <style>
-div{
+div {
 	margin: auto;
 }
-table{
+
+table {
 	margin: auto;
 }
 </style>
 
-<div class="container">
+<div class="container" style="">
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -26,15 +27,15 @@ table{
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="../img/background.jpg" alt="Los Angeles">
+				<img src="../img/background.jpg"  alt="Los Angeles" class="img-responsive center-block">
 			</div>
 
 			<div class="item">
-				<img src="../img/background.jpg" alt="Chicago">
+				<img src="../img/background.jpg" alt="Chicago" class="img-responsive center-block">
 			</div>
 
 			<div class="item">
-				<img src="../img/background.jpg" alt="New york">
+				<img src="../img/background.jpg" alt="New york" class="img-responsive center-block">
 			</div>
 		</div>
 
@@ -52,9 +53,10 @@ table{
 
 <div class=inline>
 	<!-- 최신상품 출력  -->
-	<table align = center width="100%">
+	<table align=center width="100%">
 		<div align=center>
-			<td bgcolor=white><img src="../img/title_newproduct.gif" style="margin-left: auto; margin-right: auto; display: block;">
+			<td bgcolor=white><img src="../img/title_newproduct.gif"
+				style="margin-left: auto; margin-right: auto; display: block;">
 		</div>
 	</table>
 
@@ -119,7 +121,8 @@ table{
 <!-- 베스트 상품 -->
 <tr>
 	<div align=left>
-		<td bgcolor=white><img src="../img/title_bestproduct.gif" style="margin-left: auto; margin-right: auto; display: block;">
+		<td bgcolor=white><img src="../img/title_bestproduct.gif"
+			style="margin-left: auto; margin-right: auto; display: block;">
 	</div>
 	</td>
 </tr>
@@ -257,7 +260,8 @@ table{
 <!-- 추천상품 -->
 <tr>
 	<div align=left>
-		<td bgcolor=white><img src="../img/title_hitproduct.gif" style="margin-left: auto; margin-right: auto; display: block;">
+		<td bgcolor=white><img src="../img/title_hitproduct.gif"
+			style="margin-left: auto; margin-right: auto; display: block;">
 	</div>
 	</td>
 </tr>
@@ -289,7 +293,7 @@ table{
 				%>
 
 				<!-- 상품  테이블 표시-->
-			<td>
+				<td>
 					<table width=145 border=0 cellpadding=1 cellspacing=2 align=center>
 						<tr>
 							<td colspan=2 align=center valign=top><a

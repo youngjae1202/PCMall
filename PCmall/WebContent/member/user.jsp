@@ -8,7 +8,9 @@
 </head>
 
 <BODY>
-    <jsp:include page="../common/basic_screen.jsp" flush="true"/>
+    <%-- <jsp:include page="../common/basic_screen.jsp" flush="true"/> --%>
+    <jsp:include page="../common/logo.jsp" flush="true" />
+	<jsp:include page="../common/menubar.jsp" flush="true" />
 	<jsp:include page="insert_form.jsp" flush="true"/>
 	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </body>

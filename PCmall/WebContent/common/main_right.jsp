@@ -1,156 +1,179 @@
-<%@ page contentType="text/html;charset=utf-8" import="java.sql.*,oracle.dbpool.*" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page contentType="text/html;charset=utf-8"
+	import="java.sql.*,oracle.dbpool.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<link rel="stylesheet" media="screen"
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
-<table align=left border =1 width=450 cellpadding=0 cellspacing=0 bgcolor=#ffffff>
-	<div id = "myCarousel" class = "carousel slide">
-   
-   <!-- Carousel indicators -->
-   <ol class = "carousel-indicators">
-      <li data-target = "#myCarousel" data-slide-to = "0" class = "active"></li>
-      <li data-target = "#myCarousel" data-slide-to = "1"></li>
-      <li data-target = "#myCarousel" data-slide-to = "2"></li>
-   </ol>   
-   
-   <!-- Carousel items -->
-   <div class = "carousel-inner">
-      <div class = "item active">
-         <img src = "../img/title_newproduct.gif" alt = "First slide">
-      </div>
-      
-      <div class = "item">
-         <img src = "../img/title_newproduct.gif" alt = "Second slide">
-      </div>
-      
-      <div class = "item">
-         <img src = "" alt = "Third slide">
-      </div>
-   </div>
-   
-   <!-- Carousel nav -->
-   <a class = "carousel-control left" href = "#myCarousel" data-slide = "prev">&lsaquo;</a>
-   <a class = "carousel-control right" href = "#myCarousel" data-slide = "next">&rsaquo;</a>
-   
-</div> 
-	<!-- 최신상품 출력  -->
-	<tr>
-		<div align=left><td bgcolor=white><img src="../img/title_newproduct.gif"></div></td>
-	</tr>
-	<tr>
-		<td width=450>
-			<table width=435 border=0 cellpadding=1 cellspacing=1>
-				<tr>
-<%
-	try {
-		String name, company_id, expression, photo;
-		int id, price;
+<div class="container">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
 
-		DBConnectionManager pool = DBConnectionManager.getInstance();
-		Connection con = pool.getConnection("ora8");
-		Statement stmt=con.createStatement();
-		ResultSet rs=stmt.executeQuery("select id,name,price,photo from product where id between 49 and 51");
-		int flag=0;
-		while(rs.next()) {
-			id=rs.getInt(1);
-			name=rs.getString(2);
-			price=rs.getInt(3);
-			photo=rs.getString(4);
-%>
-         <!-- 표시 테이블  -->
-		<td>
-			<table width=145 border=0 cellpadding=1 cellspacing=2 align=center>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="../img/background.jpg" alt="Los Angeles">
+			</div>
+
+			<div class="item">
+				<img src="../img/background.jpg" alt="Chicago">
+			</div>
+
+			<div class="item">
+				<img src="../img/background.jpg" alt="New york">
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span> <span
+			class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#myCarousel"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+</div>
+
+<!-- 최신상품 출력  -->
+<tr>
+	<table align="center" width="100%" >
+		<div align=left>
+			<td bgcolor=white><img src="../img/title_newproduct.gif">
+		</div>
+	</table>
+</tr>
+
+<tr>
+	<td width=450>
+		<table width=435 border=0 cellpadding=1 cellspacing=1>
 			<tr>
-				<td colspan=2 align=center><a href="../product/product.jsp?i=<%= id %>">
-				<img src="../product/image/<%= photo %>" width=90 height=90 border=0></a></td>
-			</tr>
-			<tr>
-				<td width=145><font color=blue>&nbsp;<a href="../product/product.jsp?i=<%= id %>">[<%=name%>]</a></font></td>
-			</tr>
-			<tr>
+				<%
+					try {
+						String name, company_id, expression, photo;
+						int id, price;
+
+						DBConnectionManager pool = DBConnectionManager.getInstance();
+						Connection con = pool.getConnection("ora8");
+						Statement stmt = con.createStatement();
+						ResultSet rs = stmt.executeQuery("select id,name,price,photo from product where id between 49 and 51");
+						int flag = 0;
+						while (rs.next()) {
+							id = rs.getInt(1);
+							name = rs.getString(2);
+							price = rs.getInt(3);
+							photo = rs.getString(4);
+				%>
+				<!-- 표시 테이블  -->
 				<td>
-				<c:set var="fmtPrice" value="<%=price%>"/>
-				<font color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원]</font>
+					<table width=145 border=0 cellpadding=1 cellspacing=2 align=center>
+						<tr>
+							<td colspan=2 align=center><a
+								href="../product/product.jsp?i=<%=id%>"> <img
+									src="../product/image/<%=photo%>" width=90 height=90 border=0></a></td>
+						</tr>
+						<tr>
+							<td width=145><font color=blue>&nbsp;<a
+									href="../product/product.jsp?i=<%=id%>">[<%=name%>]
+								</a></font></td>
+						</tr>
+						<tr>
+							<td><c:set var="fmtPrice" value="<%=price%>" /> <font
+								color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }"
+										pattern="#,###" />&nbsp;원]
+							</font></td>
+						</tr>
+					</table>
 				</td>
-			</tr>  
-			</table>
-	    </td>
-<%
-	    }
-       rs.close(); 
-       stmt.close();
-       pool.freeConnection("ora8", con);
-      } catch (Exception e) {
-	     out.println(e);
-      }
-%>
-				</tr>
-			</table>
-		</td> 
-	</tr>
+				<%
+					}
+						rs.close();
+						stmt.close();
+						pool.freeConnection("ora8", con);
+					} catch (Exception e) {
+						out.println(e);
+					}
+				%>
+			</tr>
+		</table>
+	</td>
+</tr>
 
-	<!-- 베스트 상품 -->
-	<tr><div align=left>
-		<td bgcolor=white><img src="../img/title_bestproduct.gif"></div></td>
-	</tr>
-	<tr>
-		<td bgcolor=#dddddd><img height=1 src="" width=1></td>
-	</tr>
-	<tr>
-		<td>
-			<table width=450 border=0 cellpadding=1 cellspacing=1>
-				<tr>
-<%
-	try {
-		String name,company_id,expression,photo;
-		int id,price;
+<!-- 베스트 상품 -->
+<tr>
+	<div align=left>
+		<td bgcolor=white><img src="../img/title_bestproduct.gif">
+	</div>
+	</td>
+</tr>
+<tr>
+	<td bgcolor=#dddddd><img height=1 src="" width=1></td>
+</tr>
+<tr>
+	<td>
+		<table width=450 border=0 cellpadding=1 cellspacing=1>
+			<tr>
+				<%
+					try {
+						String name, company_id, expression, photo;
+						int id, price;
 
-		DBConnectionManager pool = DBConnectionManager.getInstance();
-		Connection con = pool.getConnection("ora8");
+						DBConnectionManager pool = DBConnectionManager.getInstance();
+						Connection con = pool.getConnection("ora8");
 
-		Statement stmt=con.createStatement();
-		ResultSet rs=stmt.executeQuery("select id,name,price,company_id,expression,photo from product where id between 9 and 11");
-		int flag=0;
-		while(rs.next()) {
-			id=rs.getInt(1);
-			name=rs.getString(2);
-			price=rs.getInt(3);
-			company_id=rs.getString(4);
-			expression=rs.getString(5);
-			photo=rs.getString(6);
-%>
-       <!-- 표시테이블 -->
-		<td>
-			<table width=145 border=0 cellpadding=1 cellspacing=2 align=center>
-				<tr>
-					<td colspan=2 align=center valign=top><a href="../product/product.jsp?i=<%= id %>">
-						<img src="../product/image/<%=photo%>" width=90 height=90 border=0></a></td>
-				</tr>
-				<tr>
-					<td width=145><font color=blue><a href="../product/product.jsp?i=<%= id %>">[<%=name%>]</a></font></td>
-				</tr>
-				<tr>
-					<td>
-					<c:set var="fmtPrice" value="<%=price%>"/>
-					<font color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원]</font>
-					</td>
-				</tr>
-			</table>
-		</td>
-<%
- 	    }
-        rs.close(); 
-        stmt.close();	
-        pool.freeConnection("ora8", con);    
-       } catch (Exception e) {
-          out.println(e);
-       }
-%>
-				</tr>
-			</table>
-		</td>
-	</tr>
+						Statement stmt = con.createStatement();
+						ResultSet rs = stmt.executeQuery(
+								"select id,name,price,company_id,expression,photo from product where id between 9 and 11");
+						int flag = 0;
+						while (rs.next()) {
+							id = rs.getInt(1);
+							name = rs.getString(2);
+							price = rs.getInt(3);
+							company_id = rs.getString(4);
+							expression = rs.getString(5);
+							photo = rs.getString(6);
+				%>
+				<!-- 표시테이블 -->
+				<td>
+					<table width=145 border=0 cellpadding=1 cellspacing=2 align=center>
+						<tr>
+							<td colspan=2 align=center valign=top><a
+								href="../product/product.jsp?i=<%=id%>"> <img
+									src="../product/image/<%=photo%>" width=90 height=90 border=0></a></td>
+						</tr>
+						<tr>
+							<td width=145><font color=blue><a
+									href="../product/product.jsp?i=<%=id%>">[<%=name%>]
+								</a></font></td>
+						</tr>
+						<tr>
+							<td><c:set var="fmtPrice" value="<%=price%>" /> <font
+								color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }"
+										pattern="#,###" />&nbsp;원]
+							</font></td>
+						</tr>
+					</table>
+				</td>
+				<%
+					}
+						rs.close();
+						stmt.close();
+						pool.freeConnection("ora8", con);
+					} catch (Exception e) {
+						out.println(e);
+					}
+				%>
+			</tr>
+		</table>
+	</td>
+</tr>
 
-<!--  최신 qna  -->
+<%-- <!--  최신 qna  -->
 	<tr>
 		<td>
 			<script language="javascript">
@@ -218,67 +241,68 @@
 	</tr>
 </table>
 </td>
-
-<!-- 추천상품(오른쪽 메뉴) -->
-<!-- <td valign=top width=180>
-<table border=0 cellpadding=0 cellspacing=0 width=175>
-	<tr><div align=left>
-		<td bgcolor=white><img src="../img/title_hitproduct.gif"></div></td>
-		<td align=right>&nbsp;</td>
-	</tr>
-</table>
-<table border = 0 cellPadding=0 cellSpacing=0 width=170>
-	<tr>
-		<td colspan=3 width=141 height=1 bgcolor="#c4beb7">
-	</tr> -->
-<%
-	try {
-		String name,company_id,expression,photo,code;
-		int id,price;
-		DBConnectionManager pool = DBConnectionManager.getInstance();
-		Connection con = pool.getConnection("ora8");
-
-		Statement stmt=con.createStatement();
-		ResultSet rs=stmt.executeQuery("select id,name,price,company_id,expression,photo,code from product where category between 34 and 35");
-		while(rs.next()) {
-			id=rs.getInt(1);	
-			name=rs.getString(2);
-			price=rs.getInt(3);
-			company_id=rs.getString(4);
-			expression=rs.getString(5);
-			photo=rs.getString(6);
-			code=rs.getString(7);
-%>
-
-<!-- 상품  테이블 표시-->
-	<tr>
-		<td rowspan=3 width=5><img src="" width=8 height=8 border=0></td>
-		<td width=65 height=70 align=left valign=middle><A href="../product/product.jsp?i=<%= id %>">
-          <img src="../product/image/<%= photo %>" width=60 height=60 border=0></A></td>
-		<td width=100><a href="../product/product.jsp?i=<%= id %>">[<%= name %>]</a><br>
-          
-          <c:set var="fmtPrice" value="<%=price%>"/>
-          <font class="P9" color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원]</font></td>
-	</tr>
-	<tr>
-		<td colspan= 2 width=170><%= expression%></td>
-	</tr>
-	<tr>
-		<td width=170 colspan=2 align=right>&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan=3 width=170 height=1 bgcolor="#c4beb7"></td>
-	<tr>
-<%
-		}
-		rs.close(); 
-		stmt.close();
-		pool.freeConnection("ora8", con); 
-	} catch (Exception e) {
-		out.println(e);
-	}
-%>
-	</table><br>
+ --%>
+<!-- 추천상품 -->
+<tr>
+	<div align=left>
+		<td bgcolor=white><img src="../img/title_hitproduct.gif">
+	</div>
 	</td>
-	</tr>
-</table>
+</tr>
+<tr>
+	<td bgcolor=#dddddd><img height=1 src="" width=1></td>
+</tr>
+<tr>
+	<td>
+		<table width=450 border=0 cellpadding=1 cellspacing=1>
+			<tr>
+				<%
+					try {
+						String name, company_id, expression, photo, code;
+						int id, price;
+						DBConnectionManager pool = DBConnectionManager.getInstance();
+						Connection con = pool.getConnection("ora8");
+
+						Statement stmt = con.createStatement();
+						ResultSet rs = stmt.executeQuery(
+								"select id,name,price,company_id,expression,photo,code from product where category between 34 and 35");
+						while (rs.next()) {
+							id = rs.getInt(1);
+							name = rs.getString(2);
+							price = rs.getInt(3);
+							company_id = rs.getString(4);
+							expression = rs.getString(5);
+							photo = rs.getString(6);
+							code = rs.getString(7);
+				%>
+
+				<!-- 상품  테이블 표시-->
+			<tr>
+				<td rowspan=3 width=5><img src="" width=8 height=8 border=0></td>
+				<td width=65 height=70 align=left valign=middle><A
+					href="../product/product.jsp?i=<%=id%>"> <img
+						src="../product/image/<%=photo%>" width=60 height=60 border=0></A></td>
+				<td width=100><a href="../product/product.jsp?i=<%=id%>">[<%=name%>]
+				</a><br> <c:set var="fmtPrice" value="<%=price%>" /> <font
+					class="P9" color=red>&nbsp;[<fmt:formatNumber
+							value="${fmtPrice }" pattern="#,###" />&nbsp;원]
+				</font></td>
+			</tr>
+			<tr>
+				<td colspan=2 width=170><%=expression%></td>
+			</tr>
+			<tr>
+				<td width=170 colspan=2 align=right>&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan=3 width=170 height=1 bgcolor="#c4beb7"></td>
+			<tr>
+				<%
+					}
+						rs.close();
+						stmt.close();
+						pool.freeConnection("ora8", con);
+					} catch (Exception e) {
+						out.println(e);
+					}
+				%>

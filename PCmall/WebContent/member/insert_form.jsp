@@ -71,12 +71,12 @@
      
 <BODY bgcolor="#EEEEE0">
 	<br>
-	<table border=1 width=550 height=30 bordercolor=black>
+	<div>
+	<table border=1 width=550 height=30 bordercolor=black align=center >
 		<tr>
-			<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>회 원 가 입</b></td>
+			<td align="center" bgcolor=0063ce><font size=3 color=#FFFFFF><b>회 원 가 입</b></td>
 		</tr>
 	</table>
-	<br>
 	<form name=form_name method=post action="insert.jsp">
 	<table border=1 cellpadding=3 cellspacing=0 width=550 valign=top align=center>
 		<tr>
@@ -156,12 +156,13 @@
 			</td>                
 		</tr>
 		<tr bgcolor=#00FF00>
-			<td colspan=3 align=left><font color=red> * </font><font color=black>표시항목은 반드시 입력하십시요.</font>&nbsp;&nbsp;
+			<td colspan=3 align=left><font color=red> * </font><font color=black>표시항목은 반드시 입력하십시요.</font>&nbsp;&nbsp;<br/>
 				<input type="button" name="formcheck" value="가   입" OnClick="form_check()">
 				<input type="reset" value="취  소">
 			</td>
 		</tr>
 	</table>
+	</div>
 	</form>
 	</center>
 </BODY>

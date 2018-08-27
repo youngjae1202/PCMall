@@ -13,26 +13,23 @@
 
 <body>
 	<div class="navbar-wrapper">
-		<div class="container">
-
-			<nav class="navbar navbar-inverse navbar-static-top">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed"
-							data-toggle="collapse" data-target="#navbar"
-							aria-expanded="false" aria-controls="navbar">
-							<span class="sr-only">Toggle navigation</span> <span
-								class="icon-bar"></span> <span class="icon-bar"></span> <span
-								class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="../main/index.jsp">Web Mall</a>
-					</div>
-					<div id="navbar" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<table name="top_table">
-   <li>
- 
-      <li> 
+	<div class="container">
+	<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span> 
+			<spanclass="icon-bar"></span> 
+			<span class="icon-bar"></span> 
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="../main/index.jsp">Web Mall</a>
+	</div>
+	<div id="navbar" class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+		<table name="top_table">
+			<li>
+			<li> 
 <%
          if( session.getAttribute("pid") != null) {
 %>         <%// page로그인하면 로그아웃이 보이고 로그아웃하면 로그인이 나오게하는 액션부분 %>

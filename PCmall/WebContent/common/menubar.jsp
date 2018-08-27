@@ -20,7 +20,7 @@ function MM_showHideLayers() { //v3.0
 //-->
 </script>
 
-<BODY>
+<body>
 <nav>
       <div class="container">
         <div id="navbar" class="navbar-collapse collapse">

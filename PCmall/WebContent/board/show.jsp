@@ -5,17 +5,12 @@
 <script src="../js/ie-emulation-modes-warning.js"></script>
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
 <style> 
-	table {
-	
-    border-top: 1px solid #444444;
-    border-collapse: collapse;
-	margin-left: auto; 
-	margin-right: auto;
-	
-	
- }
    th, td {
   
+  }
+  .table-responsive{
+  	width : 1150;
+  	margin: auto;
   }
   </style>
 <%!
@@ -24,8 +19,6 @@
  %>
 
 <%
-
-
 try {
       
    //DB풀 메니저 객체 생성 사용
@@ -33,12 +26,9 @@ try {
    Connection con = pool.getConnection("ora8");
      
    String bid=request.getParameter("b_id"); 
-
    Statement stmt = con.createStatement();
    stmt.executeUpdate("update re_board set b_hit=b_hit+1 where b_id="+bid+"");  //조회수를 올린다
-
    String sql="select b_id, b_name, b_email, b_title, b_content, to_char(b_date,'yy-mm-dd'),b_hit, b_ip, ref, step, anslevel, pwd  from re_board where b_id="+bid; 
-
    ResultSet rs = stmt.executeQuery(sql);  
    if(rs.next()) {   
       b_id=rs.getInt(1);
@@ -81,7 +71,7 @@ try {
 	</tr>
   </table>
   <br>
-<table class="table" width="550" border="1" cellspacing="0" cellpadding="0">
+<table class="table" width="550" border="2" cellspacing="0" cellpadding="0">
 
 	<tr>
 	   <td width=120 align=center bgcolor=white>등록자</td>

@@ -14,7 +14,7 @@
 
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 
-		Connection conn = DriverManager.getConnection(url, "antman", "12345");
+		Connection conn = DriverManager.getConnection(url, "orauser04", "12345");
 
 		if (conn != null) {
 			out.println("연결 완료");

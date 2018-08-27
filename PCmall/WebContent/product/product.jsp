@@ -59,11 +59,11 @@
 %>
 
 <br><br>
-<table border=0 cellpadding=0 cellspacing=0 width=605 align=center>
-   <tr bgcolor=black height=30>
-       <td  colspan=3 align=center bgcolor=black><font color="#ffffff"><b> [<%= name %>]상세 상품 정보</b></font></td>
+<%-- <table border=0 cellpadding=0 cellspacing=0  align=center>
+   <tr bgcolor=black height="10">
+       <td  colspan=3 align=center bgcolor=black><font color="#ffffff" ><b> [<%= name %>]상세 상품 정보</b></font></td>
   </tr>
-</table><br>
+</table><br> --%>
 	
 <table border=1 align=center cellpadding=0 cellspacing=0 width=600>
  <tbody> 
@@ -71,7 +71,7 @@
       <td valign=top> 
         <table border=0 cellpadding=0 cellspacing=0 width=200>
           <tr> 
-            <td valign=top><img border=0 name=picmedium height=200 width=200 src="image/<%=photo%>"></td>
+            <td valign=top><img border=0 name=picmedium height=200 width=200 src="image/<%=photo%>" width=100% height=100%></td>
           </tr>
          </table>
       </td>

@@ -5,7 +5,7 @@
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
 <style>
   table {
-    width: 90%;
+    width: 80%;
     border-top: 1px solid #444444;
     border-collapse: collapse;
 	margin-left: auto; 
@@ -15,6 +15,8 @@
   
     border-bottom: 1px solid #444444;
     padding: 10px;
+  }
+  .table table-bordered{
   }
 </style>
 
@@ -57,7 +59,6 @@
  
 		String  b_name, b_email, b_title, b_content, b_date, mailto;
 		int  b_id =0 , b_hit = 0, level=0, color=1 ;
-
 		// DB 행의 수 계산
 		Statement stmt = con.createStatement();  
 		ResultSet pageset = stmt.executeQuery("select count(b_id) from re_board");
@@ -65,30 +66,24 @@
 			dbcount = pageset.getInt(1); 
 			pageset.close();
 		}
-
 		//글번호
         int ii = dbcount + 1;
-
 		if(dbcount%pagesize == 0)   
 			pagecount = dbcount/(pagesize); // 총 페이지수 구하기
 		else
 			pagecount = dbcount/(pagesize)+1; // 총 페이지수 구하기
-
 		if(request.getParameter("pageNUM") != null) {
 			pageNUM=Integer.parseInt(request.getParameter("pageNUM"));	 //지정된 페이지 보여주기
 			absolutepage=(pageNUM-1)*pagesize+1;
 			ii = ii - (pageNUM-1)*pagesize;
 		}
-
 		String sql = "select b_id, b_name, b_email, b_title, b_content, ";
 		sql = sql + " to_char(b_date,'yy-mm-dd'), b_hit, ref, step, anslevel "; 
 		sql = sql + " from re_board order by ref desc, step ";
 		sql = sql.toUpperCase().trim();
 		ResultSet rs = stmt.executeQuery(sql);
-
 		for(int k=1; k<absolutepage; k++)rs.next();
 		int k=1;
-
 		while(rs.next() && k<=pagesize){ 
 			b_id=rs.getInt(1);			//글번호
 			b_name=rs.getString(2);		// 글쓴이
@@ -127,7 +122,6 @@
 <%
 		k++;
 		} 
-
 		rs.close();
 		stmt.close(); 
 		con.close(); 

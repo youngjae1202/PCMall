@@ -9,10 +9,10 @@
 </HEAD>
 
 <BODY topmargin=0 leftmargin=0 bgcolor=white>
-	<center><br>
+	<br>
 	<table cellpadding=0 cellspacing=0 border=1 width=250>
-		<tr bgcolor=#7eaee9>
-			<td align=center><b>게시물의 비밀번호를 입력하세요.</b></td>
+		<tr bgcolor=black>
+			<td align=center><b><font color=white>게시물의 비밀번호를 입력하세요.</font></b></td>
 		</tr>
 		<form name="frm" method="post" action="delete.jsp">
   		<tr>
@@ -23,6 +23,6 @@
 		</tr>
 		<input type="hidden" name="b_id" value="<%=b_id%>">  
 	</form>
-	</table></center>
+	</table>
 </BODY>
 </HTML>

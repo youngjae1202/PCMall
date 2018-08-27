@@ -8,7 +8,6 @@
 <style>
 table {
 	border-top: 1px solid #444444;
-	border-collapse: collapse;
 	margin-left: auto;
 	margin-right: auto;
 }

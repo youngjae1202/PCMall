@@ -8,10 +8,9 @@
 	table {
 	
     border-top: 1px solid #444444;
-    border-collapse: collapse;
 	margin-left: auto; 
 	margin-right: auto;
-	
+	width : 50%;
 	
  }
    th, td {
@@ -89,7 +88,7 @@ function go_reply()
 <div class="table-responsive" >
   <table class="table" border=1 width=550 height=30 bordercolor=black>
 	<tr>
-		<td align=center bgcolor=0063ce><font size=3 color=#FFFFFF><b>게시물 답변</b></td>
+		<td align=center bgcolor=black><font size=3 color=#FFFFFF><b>게시물 답변</b></td>
 	</tr>
   </table><br>
 
@@ -108,15 +107,15 @@ function go_reply()
 	   <td width=160 bgcolor=ffffff>&nbsp;<input type="password" name="pwd" size=15 value="" ></td>
 	</tr>	
 	<tr>
-	   <td width=110 align=center bgcolor="#7eaee9">E-mail 주소</td>
+	   <td width=110 align=center bgcolor=white>E-mail 주소</td>
 	   <td  colspan=3 bgcolor=ffffff>&nbsp;<input type="text" size=30 name="email" value=""></td>
 	</tr>	
 	<tr>
-	   <td align=center bgcolor="#7eaee9">제 목</td>
+	   <td align=center bgcolor=white>제 목</td>
 	   <td  colspan=3 bgcolor=ffffff>&nbsp;<input type="text" size=40 name="title" value="<%="[답변] "+b_title%>"></td>
 	</tr>	
 	<tr>
-	   <td align=center bgcolor="#7eaee9">내 용</td>
+	   <td align=center bgcolor=white>내 용</td>
 	   <td  colspan=3 bgcolor=ffffff>
            <table class="table">
 		      <tr>

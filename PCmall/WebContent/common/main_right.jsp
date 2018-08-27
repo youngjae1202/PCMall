@@ -289,26 +289,26 @@ table{
 				%>
 
 				<!-- 상품  테이블 표시-->
-			<tr>
-				<td rowspan=3 width=5><img src="" width=8 height=8 border=0></td>
-				<td width=65 height=70 align=left valign=middle><A
-					href="../product/product.jsp?i=<%=id%>"> <img
-						src="../product/image/<%=photo%>" width=60 height=60 border=0></A></td>
-				<td width=100><a href="../product/product.jsp?i=<%=id%>">[<%=name%>]
-				</a><br> <c:set var="fmtPrice" value="<%=price%>" /> <font
-					class="P9" color=red>&nbsp;[<fmt:formatNumber
-							value="${fmtPrice }" pattern="#,###" />&nbsp;원]
-				</font></td>
-			</tr>
-			<tr>
-				<td colspan=2 width=170><%=expression%></td>
-			</tr>
-			<tr>
-				<td width=170 colspan=2 align=right>&nbsp;</td>
-			</tr>
-			<tr>
-				<td colspan=3 width=170 height=1 bgcolor="#c4beb7"></td>
-			<tr>
+			<td>
+					<table width=145 border=0 cellpadding=1 cellspacing=2 align=center>
+						<tr>
+							<td colspan=2 align=center valign=top><a
+								href="../product/product.jsp?i=<%=id%>"> <img
+									src="../product/image/<%=photo%>" width=90 height=90 border=0></a></td>
+						</tr>
+						<tr>
+							<td width=145><font color=blue><a
+									href="../product/product.jsp?i=<%=id%>">[<%=name%>]
+								</a></font></td>
+						</tr>
+						<tr>
+							<td><c:set var="fmtPrice" value="<%=price%>" /> <font
+								color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }"
+										pattern="#,###" />&nbsp;원]
+							</font></td>
+						</tr>
+					</table>
+				</td>
 				<%
 					}
 						rs.close();

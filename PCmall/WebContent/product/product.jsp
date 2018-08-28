@@ -13,14 +13,11 @@
   table {
     width: 90%;
     height : 500;
-    border-top: 1px solid #444444;
     border-collapse: collapse;
 	margin-left: auto; 
 	margin-right: auto;
  }
   th, td {
-  
-    border-bottom: 1px solid #444444;
     padding: 10px;
   }
 </style>
@@ -65,45 +62,45 @@
   </tr>
 </table><br> --%>
 	
-<table border=1 align=center cellpadding=0 cellspacing=0 width=600>
+<table align=center  width=600>
  <tbody> 
     <tr> 
       <td valign=top> 
-        <table border=0 cellpadding=0 cellspacing=0 width=200>
+        <table width=200>
           <tr> 
-            <td valign=top><img border=0 name=picmedium height=200 width=200 src="image/<%=photo%>" width=100% height=100%></td>
+            <td valign="baseline"><img name=picmedium height=500 width=400  src="image/<%=photo%>"></td>
           </tr>
          </table>
       </td>
 
       <td> 
-        <table border=1 cellpadding=0 cellspacing=0 width=400>
+        <table cellpadding=0 cellspacing=0 width=400>
           <tr> 
               <td colspan=2 align=center  bgcolor=black width=400><font size=3 color=white><b><%=name%></b></font></td>
 		 </tr>
           <tr>
-                  <td width=90>&nbsp; 상품분류</td>
+                  <td width=90>&nbsp; <b>상품분류</b></td>
                   <td width=280>&nbsp;[<%= category %>]</td>
           </tr>
           <tr>
-                  <td width=90>&nbsp; 가       격</td>
+                  <td width=90>&nbsp; <b>가       격</b></td>
                   <c:set var="fmtPrice" value="<%=price%>"/>
                   <td width=280>&nbsp;<fmt:formatNumber value="${fmtPrice }" pattern="#,###" />&nbsp;원</td>
           </tr>
            <tr> 
-                  <td>&nbsp; 제조 회사</td>
+                  <td>&nbsp; <b>제조 회사</b></td>
                   <td>&nbsp;<%=company_id  %></td>
           </tr>
           <tr> 
-                  <td>&nbsp; 상품 코드</td>
+                  <td>&nbsp; <b>상품 코드</b></td>
                   <td>&nbsp;<%= code%></td>
            </tr>
             <tr> 
-                  <td>&nbsp; 등  록  일</td>
+                  <td>&nbsp; <b>등  록  일</b></td>
                   <td>&nbsp;<%= cdate %></td>
            </tr>
           <tr> 
-            <td>&nbsp; 상세 설명</td>
+            <td>&nbsp; <b>상세 설명</b></td>
             <td>&nbsp;<%=expression%></td>
           </tr>
         <tr>

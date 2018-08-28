@@ -8,14 +8,23 @@
 <%
    MultiPart multiPart = new MultiPart(request);
    
-   String title = multiPart.getParameter("title");
+
+   //전송된 데이터를 받음
+ /*   String title = multiPart.getParameter("title");
    String description = multiPart.getParameter("description");
-   
-   String fileName = multiPart.getFileName("upload_file");
+  */  
+   String code = multiPart.getParameter("combo");
+   String name = multiPart.getParameter("name");
+   String price = multiPart.getParameter("price");
+   String expression = multiPart.getParameter("expression");
+ 
+   //파일 이름 및 파일을 받을 경로 지정
+   String fileName = multiPart.getFileName("upload_file");  
    String newPath = application.getRealPath("/product/image/files/" + fileName);
    multiPart.saveFile("upload_file", newPath);
    
-   String url = String.format("UploadResult.jsp?title=%s&description=%s&file_name=%s", URLEncoder.encode(title, "utf-8"),URLEncoder.encode(description, "utf-8"), URLEncoder.encode(fileName, "utf-8"));
+   //파일 결과 값을 지정하기 위한것
+   String url = String.format("product_insert.jsp?code=%s&name=%s&price=%s&expression=%s&fileName=%s", URLEncoder.encode(code, "utf-8"),URLEncoder.encode(name, "utf-8"),URLEncoder.encode(price, "utf-8"),URLEncoder.encode(expression, "utf-8"),URLEncoder.encode(fileName, "utf-8"));
    response.sendRedirect(url);
    
    

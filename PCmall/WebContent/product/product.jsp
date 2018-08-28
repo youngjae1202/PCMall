@@ -40,7 +40,7 @@
 	Connection con = pool.getConnection("ora8");
     
 	try {
-		 productid = Integer.parseInt(request.getParameter("i"));
+		productid = Integer.parseInt(request.getParameter("i"));
 		String pid= (String)session.getAttribute("pid");
 	
 		String sql1="select id,name,price,company_id,expression,photo,cname,code,cdate from product_view where id ="+ productid;

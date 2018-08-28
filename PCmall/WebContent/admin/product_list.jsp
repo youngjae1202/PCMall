@@ -119,6 +119,7 @@
 			<td width=100 align=center>
 			<a href='show.jsp?b_id=<%= b_id %>'>
 <%			
+
 				if(level>0) { 
 					for(int i = 0; i< level; i++){
  %>				&nbsp;

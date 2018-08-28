@@ -100,6 +100,8 @@
 			}
             ii--;
  %>
+ 
+ 
 		<tr height=22 bgcolor=#ffffff onMouseOver=this.style.backgroundColor='#FAFAFA'  onMouseOut=this.style.backgroundColor='#FFFFFF'>
 			<td width=50 align=center><%= ii %></td>
 			<td width=230 align="left"><a href='show.jsp?b_id=<%= b_id %>'>

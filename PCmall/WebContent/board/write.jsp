@@ -52,7 +52,9 @@ Connection con = pool.getConnection("ora8");
         step=0;
         level=0;
     }        
+    
 
+    
 	sql = "insert into re_board (B_ID, PWD, B_NAME, B_EMAIL, B_TITLE, B_CONTENT, B_HIT, B_IP, REF, STEP, ANSLEVEL, B_DATE )values(?,?,?,?,?,?,?,?,?,?,?,sysdate)";
 	PreparedStatement pstmt = con.prepareStatement(sql);
 	pstmt.setInt(1,b_id);

@@ -23,6 +23,7 @@
       <tr>
       <td>코드</td>
          <td>
+         
          <select name=combo>
          <option value="1">자켓</option>
          <option value="2">양말</option>
@@ -73,6 +74,7 @@
       <tr> 
       <input type="submit" value="보내기">
          </div>
+      
       
    </form>
 </body>

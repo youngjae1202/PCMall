@@ -32,6 +32,7 @@
          <li>
          <li> 
 <%
+
          if( session.getAttribute("pid") != null) {
 %>         <%// page로그인하면 로그아웃이 보이고 로그아웃하면 로그인이 나오게하는 액션부분 %>
          <a href="../member/logout.jsp" class=line>로그아웃</a>
@@ -55,6 +56,7 @@
 
       </div>
    </div>
+   
    <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <div class="navbar-header">

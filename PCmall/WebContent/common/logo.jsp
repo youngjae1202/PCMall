@@ -82,6 +82,7 @@
 <%
          }
 %>
+
       </li>
       <li> <a href="../member/user.jsp"">회원가입</a></li>
    </li>

@@ -53,6 +53,7 @@ Connection con = pool.getConnection("ora8");
         level=0;
     }        
     
+    
 
     
 	sql = "insert into re_board (B_ID, PWD, B_NAME, B_EMAIL, B_TITLE, B_CONTENT, B_HIT, B_IP, REF, STEP, ANSLEVEL, B_DATE )values(?,?,?,?,?,?,?,?,?,?,?,sysdate)";

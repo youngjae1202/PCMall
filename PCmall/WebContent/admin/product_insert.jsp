@@ -50,6 +50,7 @@ try {
 	
 	
 	
+	
 	//제품 코드값 받아옴
 	int p_code = 0;
 	int p_codeSet = 0;

@@ -11,6 +11,7 @@
 
 
 
+
    //전송된 데이터를 받음
  /*   String title = multiPart.getParameter("title");
    String description = multiPart.getParameter("description");

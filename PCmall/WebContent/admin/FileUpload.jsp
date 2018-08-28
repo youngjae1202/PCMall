@@ -9,6 +9,7 @@
 <body>
     <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 
+
    <div class="table-responsive" border="1" >
    <table class="table" border=1 width=550 height=30 bordercolor=black>
    <tr>

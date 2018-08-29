@@ -6,20 +6,12 @@
 <script src="../js/ie-emulation-modes-warning.js"></script>
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
 <style> 
-	table {
-	
-    border-top: 1px solid #444444;
-	margin-left: auto; 
-	margin-right: auto;
-	
-	
- }
-   th, td {
+  th, td {
   
   }
-  box{
-    vertical-align: middle;
-  
+  .table-responsive{
+  	width : 1150;
+  	margin: auto;
   }
 </style>
 <html>
@@ -61,36 +53,41 @@
 
 <br>
 <form name=bbs_form method=post action="write.jsp">
-<div class="table-responsive" >
-
+<div class="table-responsive">
+	
 	  <table class="table" border=1 width=550 height=30 bordercolor=black>
 		<tr>
 			<td align=center bgcolor=black><font size=3 color=white><b>게시물 올리기</b></td>
 		</tr>
 	  </table>
 	  <br>
-<table class="table" width=550 border=1>
+<table class="table" width="550" border="2" cellspacing="0" cellpadding="0">
 	<tr>
-	   <td width=100 align=center bgcolor=white margin=auto>등록자</td>
-	   <td width=160>&nbsp;<input class=box type="text" name="b_name" size=20 value=""></td>
+	  <td width=120 align=center bgcolor=white>등록자</td>
+	   <td width=170 bgcolor=white>&nbsp;<input class=box type="text" name="b_name" size=20 value=""></td>
 	   <td width=100 align=center bgcolor=white>비밀번호</td>
-	   <td width=160>&nbsp;<input class=box type="password" name="pwd" size=15 value=""></td>
+	   <td width=160 bgcolor=white>&nbsp;<input class=box type="password" name="pwd" size=15 value=""></td>
 	</tr>	
+	
 	<tr>
-	   <td width=100 align=center bgcolor=white>e-mail</td>
-	   <td  colspan=3>&nbsp;<input type="text" name="b_email" size=30></td>
+	   <td width=120 align=center bgcolor=white>e-mail</td>
+	   <td  colspan=3 bgcolor=white>&nbsp;
+	   <input type="text" name="b_email" size=30></td>
 	</tr>	
+	
 	<tr>
 	   <td align=center bgcolor=white>제 목</td>
 	   <td colspan=3>&nbsp;<input type="text" name="b_title" size=40></td>
 	</tr>	
 	   <td align=center bgcolor=white>내 용</td>
 	   <td colspan=3>
+  
    <table class="table">
       <tr>
          <td><textarea cols=60 rows=15 name="b_content"></textarea></td>
       </tr>
    </table>
+   
 	  <tr>
 	   	<td colspan=4 align=right height=25>
 		  <a href="javascript:writeCheck()"><img src="img/b_save.gif" border=0></a>

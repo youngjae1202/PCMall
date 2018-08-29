@@ -75,16 +75,19 @@
          if( session.getAttribute("pid") != null) {
 %>         <%// page로그인하면 로그아웃이 보이고 로그아웃하면 로그인이 나오게하는 액션부분 %>
          <a href="../member/logout.jsp" class=line>로그아웃</a>
+         
+      <li class="active"><a href="../admin/product_list.jsp" class=line>관리자 게시판</a></li>
 <%
          }  else {
 %>
       <li class="active"><a href="../member/login.jsp" class=line>로그인</a></li>
+            <li> <a href="../member/user.jsp"">회원가입</a></li>
+      
+      
 <%
          }
 %>
-
       </li>
-      <li> <a href="../member/user.jsp"">회원가입</a></li>
    </li>
           </ul>
         </div><!-- /.nav-collapse -->

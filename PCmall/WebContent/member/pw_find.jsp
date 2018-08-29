@@ -16,14 +16,14 @@
         </div>
         <div class="col-md-3">
           <div class="login-box well">
-        <form accept-charset="UTF-8" role="form" method="post" action="pw_search.jsp">
+        <form accept-charset="UTF-8" role="form" method="post" action="../member/pw_search.jsp">
             <div class="form-group">
                 <label for="username-email">아이디</label>
-                <input name="user_id" id="username-email" placeholder="E-mail or Username" type="text" class="form-control" />
+                <input name="user_id" id="username-email" placeholder="ID" type="text" class="form-control" />
             </div>
             <div class="form-group">
-                <label for="password">주민번호</label>
-                <input name="user_ssn" id="password" placeholder="Password" type="text" class="form-control" />
+                <label for="password">주민등록번호</label>
+                <input name="user_ssn" id="password" placeholder="Resident Registration Number" type="password" class="form-control" /><a><span font color="red";>-</span>기호를 넣어주세요</a>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="SEARCH" />

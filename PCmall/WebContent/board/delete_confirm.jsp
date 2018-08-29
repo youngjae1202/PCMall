@@ -14,8 +14,8 @@
 
 	<br>
 	<table cellpadding=0 cellspacing=0 border=0 width=330>
-		<tr bgcolor=#7eaee9>
-			<td align=center><font color="#ffffff"><b>게시물의 비밀번호를 입력하세요.</b></font></td>
+		<tr bgcolor=#CCD6DD>
+			<td align=center><font color="red"><b>게시물의 비밀번호를 입력하세요.</b></font></td>
 		</tr>
 	</table>
 	<table cellpadding=0 cellspacing=0 border=0 width=330>

@@ -17,6 +17,7 @@
 			stmt.executeUpdate("delete from re_board where b_id="+b_id);
 %>
 			<script language=javascript>
+				alert("글이 삭제 되었습니다.");
 				document.location.href='board_list.jsp';
 			</script>
 <%

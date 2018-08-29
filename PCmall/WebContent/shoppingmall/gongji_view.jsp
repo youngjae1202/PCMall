@@ -10,7 +10,7 @@
         <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 	
 <!--  공지내용보기  -->	
-	<center><br>
+	<br>
 	  <table border=1 width=450 height=30 bordercolor=black>
 		<tr>
 			<td align=center bgcolor=0063ce><font size=2 color=white><b>공 지 사 항</b></td>
@@ -66,7 +66,6 @@
 		out.println(e);
 		}
 %>
-	</center>
 <!--  공지 내용 보기 끝 -->	  
 	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </BODY>

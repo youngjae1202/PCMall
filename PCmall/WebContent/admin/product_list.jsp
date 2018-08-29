@@ -1,49 +1,63 @@
-<%@ page contentType="text/html;charset=UTF-8" import="java.sql.*,oracle.dbpool.*"  %>
+<%@ page contentType="text/html;charset=UTF-8"
+	import="java.sql.*,oracle.dbpool.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <%
 	// 로그인이 아닌경우 
-	if(session.getAttribute("pid") == null) {
-%>		
-        <script type="text/javascript">
-			alert("회원전용 게시판 입니다.");
-			history.go(-1); 
-		</script>
-<% 
-	} else {  
+	if(session.getAttribute("pid").equals("aaaaa")) {
 %>
+<style>
+  table {
+    width: 80%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+	margin-left: auto; 
+	margin-right: auto;
+ }
+  th, td {
+  
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
+  .table table-bordered{
+  }
+</style>
 
 <HTML>
-	<HEAD><TITLE>컴퓨터전문쇼핑몰</TITLE>
-	</HEAD>
-	<link href="../common/u3.css" type=text/css rel=stylesheet>
+<HEAD>
+<TITLE>쇼핑몰</TITLE>
+</HEAD>
+<link href="../common/u3.css" type=text/css rel=stylesheet>
 
 <BODY leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
-    <jsp:include page="../common/basic_screen.jsp" flush="true"/>
+	<jsp:include page="../common/basic_screen.jsp" flush="true" />
 
-<form name=board_search method=post>
-<br>
-	<table border=1 width=550 height=30 bordercolor=black>
-		<tr>
-			<td align=center bgcolor=#E68D8D><font size=3 color=#FFFFFF><b>상 품 게 시 판</b></td>
-		</tr>
-	</table>
-	<br>
-	<table width=550 border=1 cellspacing=0 cellpadding=0  bordercolor="#C0C0C0">
-		<tr bgcolor="#E68D8D" height=21>
-			<td width=50 align="center" bgcolor="#E68D8D"><font size="2" >번호</font></td>
-			<td width=100  align="center">상품이미지</td>
-			<td width=230 align="center">상품명</td>
-			<td width=100 align="center">가격</td>
-			<td width=60 align="center">제조사</td>
-		</tr>
-<%!   
+	<form name=board_search method=post>
+		<br>
+		<table border=1 width=550 height=30 bordercolor=black>
+			<tr>
+				<td align=center bgcolor=black><font size=3 color=#FFFFFF><b>상 품 게 시 판</b></td>
+			</tr>
+		</table>
+		<br>
+		<table width=550 border=1 cellspacing=0 cellpadding=0
+			bordercolor="#C0C0C0">
+			<tr bgcolor="#E68D8D" height=21>
+				<td width=50 align="center" bgcolor="#CCD6DD"><font size="2">번호</font></td>
+				<td width=100 align="center" bgcolor="#CCD6DD">상품이미지</td>
+				<td width=230 align="center" bgcolor="#CCD6DD">상품명</td>
+				<td width=100 align="center" bgcolor="#CCD6DD">가격</td>
+				<td width=60 align="center" bgcolor="#CCD6DD">제조사</td>
+			</tr>
+			<%!   
 	int pagesize = 10;  // 한페이지당 10개 출력물
 	int pageNUM=1;    // 페이지 번호
 	int pagecount=1 ; // 페이지 갯수 지정 변수
 	int absolutepage=1;  // 절대 위치 페이지 번호
 	int dbcount=0 ;   //  DB 안에 글 갯수 저장 변수
 %>
-<%
+			<%
 	try{ 
 		DBConnectionManager pool = DBConnectionManager.getInstance();
 		Connection con = pool.getConnection("ora8");
@@ -114,31 +128,34 @@
 	 		
             ii--;
  %>
-		<tr height=22 bgcolor=ffffff onMouseOver=this.style.backgroundColor='#FFF8DE'  onMouseOut=this.style.backgroundColor='#FFFFFF'>
-			<td width=50 align=center><%= ii %></td>
-			<td width=100 align=center>
-			<a href='show.jsp?b_id=<%= b_id %>'>
-<%			
+			<tr height=22 bgcolor=ffffff onMouseOver=this.style.backgroundColor=
+				'#FFF8DE'  onMouseOut=this.style.backgroundColor='#FFFFFF'>
+				<td width=50 align=center><%= ii %></td>
+				<td width=100 align=center><a href='show.jsp?b_id=<%= b_id %>'>
+						<%			
 
 				if(level>0) { 
 					for(int i = 0; i< level; i++){
- %>				&nbsp;
- <%
+ %> &nbsp; <%
 		        }
- %>
-				<img src="../img/reply.gif" width="16" height="16"border=0>  	
-<% 
+ %> <img src="../img/reply.gif" width="16" height="16" border=0> <% 
                 } 
- %> 
-             <img border=0 name=PicMedium height=30 width=30 src="../product/image/<%=photo%>"></a></td>
-             
-             
-             
-			 <td width=230 align=center><%=name%></td>
-			 <td width=100 align=center><%=price%></td>
-			 <td width=60 align=center><%=company_id%></td>
-		  </tr>
-<%
+ %> <img border=0 name=PicMedium height=30 width=30
+						src="../product/image/<%=photo%>">
+				</a></td>
+
+
+
+				<td width=230 align=center><%=name%></td>
+				
+				<td width=100 align=center><c:set var="fmtPrice" value="<%=price%>" /> <font
+										color=black>&nbsp;<fmt:formatNumber value="${fmtPrice }"
+												pattern="#,###" />&nbsp;원
+									</font></td>
+				
+				<td width=60 align=center><%=company_id%></td>
+			</tr>
+			<%
 		k++;
 		} 
 
@@ -151,55 +168,63 @@
 	}
 %>
 
-	</table>
-	<table width=550 bgcolor=000000 border=0 cellpadding=0 cellspacing=0>
-		<tr bgcolor=ffffff>
-			<td width=10>&nbsp;</td>
-			<td width=350  align=center valign=middle height=30>
-  
-<%		// 페이지 구현부
+		</table>
+		<table width=550 bgcolor=000000 border=0 cellpadding=0 cellspacing=0>
+			<tr bgcolor=ffffff>
+				<td width=10>&nbsp;</td>
+				<td width=350 align=center valign=middle height=30>
+					<%		// 페이지 구현부
 			 int limit = 15 ;                  // 하단 페이지번호 리스트 개수셋팅 
 			 int temp =(pageNUM-1) % limit ;  
 			 int startPage = pageNUM - temp;  // 시작 페이지 구하기
 			 
 			 // [이전] 링크 추가하기
-			 if ((startPage-limit)>0){ %>     
-				<a href='board_list2.jsp?pageNUM=<%=startPage-1%>'>[이전]<a>
-<% 
+			 if ((startPage-limit)>0){ %> 
+			 <a href='product_list.jsp?pageNUM=<%=startPage-1%>' color=red ><font color=red>[이전]</font></a> 
+			 
+			 <% 
+			 
 			 }
 			 //페이지 번호 나열하기
 			 for(int i=startPage ; i<(startPage+limit);i++){
-				if( i == pageNUM){%>
-					&nbsp;<%=i%>&nbsp;
-<% 
+				if( i == pageNUM){%> <font color=black>&nbsp;<%=i%>&nbsp;</font> <% 
 				} else { 
-%>
-					<a href='board_list2.jsp?pageNUM=<%=i%>'><%=i%><a>
-<%
+%> 
+<a href='product_list.jsp?pageNUM=<%=i%>'><%=i%><a> <%
 					}
 				 if(i >= pagecount) break;
 			 }
 			 //[다음] 링크 추가
-			if ((startPage+limit)<=pagecount) { %>
-  				<a href='board_list2.jsp?pageNUM=<%=startPage+limit%>'>[다음] <a>
-<%
+			if ((startPage+limit)<=pagecount) { %> 
+			<a href='product_list.jsp?pageNUM=<%=startPage+limit%>'><font color=red>[다음] </font></a>
+											<%
 			}
 %>
-			</td>
-			<td width=180 height=30 valign=middle align=right>
-			<a href="FileUpload.jsp"><img src="../board/img/m_bt10.gif" border=0 align=absmiddle></a>
-			<a href="product_list.jsp"><img src="../board/img/m_bt06.gif" border=0 align=absmiddle></a>
-			</td>
-			<td width=10>&nbsp;</td>
-		</tr>
-	</table>
-	
+									
+				</td>
+				<td width=180 height=30 valign=middle align=right><a
+					href="FileUpload.jsp"><img src="../board/img/m_bt10.gif"
+						border=0 align=absmiddle></a> <a href="product_list.jsp"><img
+						src="../board/img/m_bt06.gif" border=0 align=absmiddle></a></td>
+				<td width=10>&nbsp;</td>
+			</tr>
+		</table>
 
-	
-</form>
-	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>
+
+
+	</form>
+	<jsp:include page="../common/basic_copyright.jsp" flush="true" />
 </body>
 </html>
+<% 
+	} else {  
+%>
+<script type="text/javascript">
+			alert("관리자 전용 게시판 입니다.");
+			history.go(-1); 
+		</script>
+
+
 
 <%
  } 

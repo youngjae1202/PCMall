@@ -21,7 +21,7 @@
 </style>
 
 <HTML>
-	<HEAD><TITLE>컴퓨터전문쇼핑몰</TITLE>
+	<HEAD><TITLE>쇼핑몰</TITLE>
 	</HEAD>
 	<link href="../common/u3.css" type=text/css rel=stylesheet>
 
@@ -30,16 +30,16 @@
 
 <form name=board_search method=post>
 <br>
-<div class="table-responsive" >
+<div class="table-responsive">
 <table class="table table-bordered">
 		<tr>
 			<td align=center bgcolor=white ><font size=3 ><b>자 유 게 시 판</b></font></td>
 		</tr>
 	</table>
 	<br>
-	<table border=0 cellspacing=0 cellpadding=0  bordercolor="white">
+	<table border=0 cellspacing=0 cellpadding=0  bordercolor="white" >
 		<tr bgcolor=black height=21>
-			<td width=50 align="center" bgcolor=white><font size="2">번호</font></td>
+			<td width=50  align="center" bgcolor=white height="50"><font size="2">번호</font></td>
 			<td width=230  align="center" bgcolor=white>제목</td>
 			<td width=100 align="center" bgcolor=white>날짜</td>
 			<td width=100 align="center" bgcolor=white>글쓴이</td>
@@ -101,7 +101,7 @@
             ii--;
  %>
 		<tr height=22 bgcolor=#ffffff onMouseOver=this.style.backgroundColor='#FAFAFA'  onMouseOut=this.style.backgroundColor='#FFFFFF'>
-			<td width=50 align=center><%= ii %></td>
+			<td width=50 align=center height="30"><%= ii %></td>
 			<td width=230 align="left"><a href='show.jsp?b_id=<%= b_id %>'>
 <%			
 				if(level>0) { 

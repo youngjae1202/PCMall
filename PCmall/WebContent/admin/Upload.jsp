@@ -7,9 +7,7 @@
 
 <%
    MultiPart multiPart = new MultiPart(request);
-   
-
-
+ 
 
 
    //전송된 데이터를 받음

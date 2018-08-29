@@ -1,13 +1,12 @@
-<%@ page contentType="text/html;charset=utf-8"  %>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<%@ page contentType="text/html;charset=utf-8"%>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <script src="../js/ie-emulation-modes-warning.js"></script>
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
 <%  
 	String pid = (String) session.getAttribute("pid"); 
 %>
-
-
 
 
 <script language="JavaScript">
@@ -22,96 +21,98 @@ function MM_showHideLayers() { //v3.0
 </script>
 
 <body>
-<nav>
-      <div class="container">
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown"> 
-            <a href="../product/categoryall.jsp?c=23" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">아우터
-            <span class="caret"></span></a>
-             <ul class="dropdown-menu" role="menu">
-                <li><a href="../product/category.jsp?c=1">자켓</a></li>
-                <li><a href="../product/category.jsp?c=2">가디건</a></li>
-                <li><a href="../product/category.jsp?c=3">코트</a></li></ul>
-            </li>
-            <li>
-            <li class="dropdown"> 
-            <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">티셔츠
-            <span class="caret"></span></a>
-             <ul class="dropdown-menu" role="menu">
-                <li><a href="../product/category.jsp?c=4">반팔</a></li>
-                <li><a href="../product/category.jsp?c=5">긴팔</a></li>
-                <li><a href="../product/category.jsp?c=6">속옷</a></li></ul>
-            </li>
-            <li><li class="dropdown"> 
-            <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">셔츠
-            <span class="caret"></span></a>
-             <ul class="dropdown-menu" role="menu">
-                <li><a href="../product/category.jsp?c=7">정장셔츠</a></li>
-                <li><a href="../product/category.jsp?c=8">캐쥬얼 셔츠</a></li>
-                <li><a href="../product/category.jsp?c=9">파자마 셔츠</a></li></ul>
-            </li>
-            <li class="dropdown"> 
-            <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">바지
-            <span class="caret"></span></a>
-             <ul class="dropdown-menu" role="menu">
-                <li><a href="../product/category.jsp?c=10">스판</a></li>
-                <li><a href="../product/category.jsp?c=11">청바지</a></li>
-                <li><a href="../product/category.jsp?c=12">슬랙스</a></li></ul>
-            </li>
-            <li class="dropdown"> 
-            <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">신발
-            <span class="caret"></span></a>
-             <ul class="dropdown-menu" role="menu">
-                <li><a href="../product/category.jsp?c=13">워커</a></li>
-                <li><a href="../product/category.jsp?c=14">로퍼</a></li>
-                <li><a href="../product/category.jsp?c=15">스니커즈</a></li></ul>
-            </li>
-            <li class="dropdown"> 
-            <a href="../main/index.jsp"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ACC
-            <span class="caret"></span></a>
-             <ul class="dropdown-menu" role="menu">
-                <li><a href="../product/category.jsp?c=16">모자</a></li>
-                <li><a href="../product/category.jsp?c=17">악세사리</a></li>
-                <li><a href="../product/category.jsp?c=18">벨트</a></li></ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">고객센터<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-          
-          
-          <!-- <tr> 
+	<nav>
+		<div class="container">
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="../product/categoryall.jsp?c=23"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false">아우터 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../product/category.jsp?c=1">자켓</a></li>
+							<li><a href="../product/category.jsp?c=2">가디건</a></li>
+							<li><a href="../product/category.jsp?c=3">코트</a></li>
+						</ul></li>
+					<li>
+					<li class="dropdown"><a href="../main/index.jsp"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false">티셔츠 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../product/category.jsp?c=4">반팔</a></li>
+							<li><a href="../product/category.jsp?c=5">긴팔</a></li>
+							<li><a href="../product/category.jsp?c=6">속옷</a></li>
+						</ul></li>
+					<li>
+					<li class="dropdown"><a href="../main/index.jsp"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false">셔츠 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../product/category.jsp?c=7">정장셔츠</a></li>
+							<li><a href="../product/category.jsp?c=8">캐쥬얼 셔츠</a></li>
+							<li><a href="../product/category.jsp?c=9">파자마 셔츠</a></li>
+						</ul></li>
+					<li class="dropdown"><a href="../main/index.jsp"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false">바지 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../product/category.jsp?c=10">스판</a></li>
+							<li><a href="../product/category.jsp?c=11">청바지</a></li>
+							<li><a href="../product/category.jsp?c=12">슬랙스</a></li>
+						</ul></li>
+					<li class="dropdown"><a href="../main/index.jsp"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false">신발 <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../product/category.jsp?c=13">워커</a></li>
+							<li><a href="../product/category.jsp?c=14">로퍼</a></li>
+							<li><a href="../product/category.jsp?c=15">스니커즈</a></li>
+						</ul></li>
+					<li class="dropdown"><a href="../main/index.jsp"
+						class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-expanded="false">ACC <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../product/category.jsp?c=16">모자</a></li>
+							<li><a href="../product/category.jsp?c=17">악세사리</a></li>
+							<li><a href="../product/category.jsp?c=18">벨트</a></li>
+						</ul></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-expanded="false">고객센터<span
+							class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="../product/basket_view.jsp?user_id=<%=pid %>">장바구니</a></li>
+							<li><a href="../board/board_list.jsp">게시판</a></li>
+							<li><a href="../service/index_site.jsp">마이페이지</a></li>
+						</ul></li>
+				</ul>
+
+
+				<!-- <tr> 
              <form name="search_form" action="../common/search_view.jsp" method=post>
 	         <td height=20 width=125 align=center>  
                    <input type="text" name="srch_word" size=14>
                    <input type="image" border=0 src="../img/s.gif"></td>
              </form>
           </tr> -->
-          
-          
-          <form class="navbar-form navbar-left" name="search_form"  role="search" action="../common/search_view.jsp" method=post>
-            <div class="form-group">
-              <input type="text" name="srch_word" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default" >Submit</button>
-          </form>
-          
-          
-          <ul class="nav navbar-nav navbar-right">
-           <li><a href="../product/basket_view.jsp?user_id=<%=pid %>" >장바구니</a></li>
-            <li><a href="../board/board_list.jsp">게시판</a></li>
-           <li><a href="../service/index_site.jsp">마이페이지</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
- <%-- <div align=left>
+
+
+				<form class="navbar-form navbar-left" name="search_form"
+					role="search" action="../common/search_view.jsp" method=post>
+					<div class="form-group">
+						<input type="text" name="srch_word" class="form-control"
+							placeholder="Search">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+
+
+				<ul class="nav navbar-nav navbar-right">
+
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<%-- <div align=left>
 <table width=780  border=0 cellspacing=0 cellpadding=0 height=39>
 <tbody valign="top" align="left" bgcolor="#eeeeee">
   <tr valign="middle" align="right" height="19">

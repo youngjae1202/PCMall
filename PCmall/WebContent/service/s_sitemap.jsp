@@ -111,7 +111,7 @@
     <button type="button" class="btn btn-default" onclick="location.href='../member/modify.jsp?user_id=<%=user_id%>'">회원 수정</button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default" onclick="location.href='../member/user_delete.jsp?user_id=<%=user_id%>'">회원 탈퇴</button>
+    <button type="button" class="btn btn-default" onclick="location.href='../member/delete.jsp?user_id=<%=user_id%>'">회원 탈퇴</button>
   </div>
 </div>
 <h1 align="center">묻고 답하기</h1>

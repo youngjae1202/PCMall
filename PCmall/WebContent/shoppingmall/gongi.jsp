@@ -13,11 +13,11 @@
 <!-- 공지사항 목록 출력 -->
 <br>
 	  
- <table align=center >
-	<tr>
-		<td color=black>공 지 사 항</td>
-	</tr>
-  </table><br>
+	<div align="center">
+		<h3>
+			<b>공 지 사 항</b>
+		</h3>
+	</div>
 
   <table align=center>
     <tr>

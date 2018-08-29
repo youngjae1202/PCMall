@@ -26,17 +26,17 @@ table {
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="../img/background.jpg" alt="Los Angeles"
+				<img src="../img/Carousel1.jpg" alt="1"
 					class="img-responsive center-block">
 			</div>
 
 			<div class="item">
-				<img src="../img/background.jpg" alt="Chicago"
+				<img src="../img/Carousel2.png" alt="2"
 					class="img-responsive center-block">
 			</div>
 
 			<div class="item">
-				<img src="../img/background.jpg" alt="New york"
+				<img src="../img/background.jpg" alt="3"
 					class="img-responsive center-block">
 			</div>
 		</div>

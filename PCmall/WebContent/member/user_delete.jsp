@@ -13,7 +13,7 @@
 
 <html>
 <head>
-  <title>컴퓨터전문쇼핑몰</title>
+  <title>WebMall</title>
 	<LINK href="../common/u3.css" type=text/css rel=STYLESHEET>
 	<SCRIPT language=JavaScript src="../common/u3.js"></script>
 <script type="text/javascript">

@@ -13,7 +13,7 @@
 
 <HTML>
 	<HEAD>
-		<TITLE>컴퓨터전문쇼핑몰</TITLE>
+		<TITLE>WebMall</TITLE>
       <link href="../common/u3.css" type=text/css rel=stylesheet>
 	</HEAD>
 

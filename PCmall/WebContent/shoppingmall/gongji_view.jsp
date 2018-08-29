@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8" import="java.sql.*,oracle.dbpool.*"   %>
 
 <HTML>
-	<HEAD><TITLE>컴퓨터전문쇼핑몰</TITLE>
+	<HEAD><TITLE>WebMall</TITLE>
 	<script language=JavaScript src="../common/u3.js"></script>
 	<link href="../common/u3.css" type=text/css rel=stylesheet>
 </HEAD>

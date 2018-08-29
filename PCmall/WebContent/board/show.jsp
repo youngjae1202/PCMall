@@ -80,11 +80,13 @@ try {
 	   <td width=160 bgcolor=white>&nbsp;<%=b_date%>
 	   </td>
 	</tr>	
+	
 	<tr>
 	   <td width=120 align=center bgcolor=white>E-mail 주소</td>
 	   <td colspan=3 bgcolor=white>&nbsp;
 	        <a href="mailto:<%=b_email%>"><%=b_email%></a></td>
 	</tr>	
+	
 	<tr>
 	   <td align=center bgcolor=white>제 목</td>
 	   <td colspan=3 bgcolor=white>&nbsp;<%=b_title%></td>
@@ -92,6 +94,7 @@ try {
 	<tr>
 	   <td align=center bgcolor=white>내 용</td>
 	   <td colspan=3 bgcolor=white>
+	   
 	    <table class="table">
 	      <tr>
 	         <textarea cols=60 rows=15 name="content"><%=b_content%></textarea>

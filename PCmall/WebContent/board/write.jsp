@@ -84,7 +84,6 @@ Connection con = pool.getConnection("ora8");
 	}
 %>
 
-
 <%! 
    String makeKOR(String str)throws java.io.UnsupportedEncodingException{
    String kor="";

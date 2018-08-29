@@ -5,16 +5,12 @@
 <script src="../js/ie-emulation-modes-warning.js"></script>
 <script src="../js/ie10-viewport-bug-workaround.js"></script>
 <style> 
-	table {
-	
-    border-top: 1px solid #444444;
-	margin-left: auto; 
-	margin-right: auto;
-	width : 50%;
-	
- }
-   th, td {
+  th, td {
   
+  }
+  .table-responsive{
+  	width : 1150;
+  	margin: auto;
   }
 </style>
 <%

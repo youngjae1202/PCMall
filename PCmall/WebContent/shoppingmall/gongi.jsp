@@ -11,7 +11,7 @@
         <jsp:include page="../common/basic_screen.jsp" flush="true"/>
 	
 <!-- 공지사항 목록 출력 -->
-<center><br>
+<br>
 	  
  <table border=1 width=500 height=30 bordercolor=black>
 	<tr>
@@ -119,8 +119,7 @@ try {
 	  out.println(e);
    }
 %>
-
-</center>  
+  
 	  
 <!--  공지사항 목록 출력 끝   -->
 	<jsp:include page="../common/basic_copyright.jsp" flush="true"/>

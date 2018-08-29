@@ -3,41 +3,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style> 
-
-  .table-responsive{
+<style>
+  table{
   	width : 1150;
-  	margin: auto;
-  
   }
 </style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>Insert title here</title>
 
 </head>
-<body>
+<BODY leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>
 	<jsp:include page="../common/basic_screen.jsp" flush="true" />
 
 
 
 
-	<div class="table-responsive" border="1">
-		<table class="table" border="1" width=550 height=30 bordercolor=black>
+	<div class="table-responsive" >
+		<table class="table" border=1 width=550 height=30 bordercolor=black>
 			<tr>
-				<td align=center bgcolor=black><font size=3 color=white><b>제품 업로드</b></font></td>
+				<td align=center bgcolor=black><font size=3 color=#FFFFFF><b>제품 업로드</b></font></td>
 			</tr>
 		</table>
 	</div>
 
+		<table class="table" width="550" border="1" cellspacing="0" cellpadding="0">
 
-	<form action="product_insert.jsp" method="post"
-		enctype="multipart/form-data">
-		<div class="table-responsive" border="1">
-	<table class="table" width="550" border="2" cellspacing="0" cellpadding="0">
+	<form action="product_insert.jsp" method="post" enctype="multipart/form-data">
 				<tr>
 					<td width=120 align=center bgcolor=white>코드</td>
-					<td width=170 bgcolor=white><select name=combo>
-							<option value="1">자켓</option>
+					<td width=170 bgcolor=ffffff><select name=combo>
+							<option value="1" >자켓</option>
 							<option value="2">가디건</option>
 							<option value="3">코트</option>
 							<option value="4">반팔 티셔츠</option>
@@ -62,12 +59,12 @@
 
 				<tr>
 					<td width=120 align=center bgcolor=white>제품명</td>
-					<td bgcolor=white><input type="text" name="name"></td>
+					<td width=170 bgcolor=ffffff><input type="text" name="name"></td>
 				</tr>
 
 				<tr>
 					<td width=120 align=center bgcolor=white>가격</td>
-					<td><input colspan=3 type="text" name="price"></td>
+					<td width=170 bgcolor=ffffff><input colspan=3 type="text" name="price"></td>
 				</tr>
 				<br />
 
@@ -76,6 +73,7 @@
 					<td><input colspan=3 type="text" name="company"></td>
 				</tr>
 				<br />
+
 
 				<tr>
 					<td width=120 align=center bgcolor=white>제품 설명</td>
@@ -91,10 +89,11 @@
 					<td><input colspan=2 type="submit" value="보내기"></td>
 					<td><input colspan=2 type="reset" value="취소"></td>
 				</tr>
-			</table>
-		</div>
 
 
 	</form>
+	</table>
+		<jsp:include page="../common/basic_copyright.jsp" flush="true" />
+	
 </body>
 </html>

@@ -73,7 +73,7 @@ table {
 								DBConnectionManager pool = DBConnectionManager.getInstance();
 								Connection con = pool.getConnection("ora8");
 								Statement stmt = con.createStatement();
-								ResultSet rs = stmt.executeQuery("select id,name,price,photo from product where id between 49 and 54");
+								ResultSet rs = stmt.executeQuery("select id,name,price,photo from product where id between 3 and 7");
 								int flag = 0;
 								while (rs.next()) {
 									id = rs.getInt(1);
@@ -209,7 +209,7 @@ table {
 
 						Statement stmt = con.createStatement();
 						ResultSet rs = stmt.executeQuery(
-								"select id,name,price,company_id,expression,photo,code from product where category between 34 and 36");
+								"select id,name,price,company_id,expression,photo,code from product where category between 15 and 18");
 						while (rs.next()) {
 							id = rs.getInt(1);
 							name = rs.getString(2);

@@ -33,7 +33,7 @@
 %>
 
 <HTML>
-	<HEAD><TITLE>컴퓨터전문쇼핑몰</TITLE>
+	<HEAD><TITLE>WebMall</TITLE>
 		<link href="../common/u3.css" type=text/css rel=stylesheet>
 	</HEAD>
 <BODY leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>

@@ -2,7 +2,7 @@
 
 <HTML>
 	<HEAD>
-		<TITLE>컴퓨터전문쇼핑몰</TITLE>
+		<TITLE>WebMall</TITLE>
 		<script language=JavaScript src="../common/u3.js"></script>
 		<link href="../common/u3.css" type=text/css rel=stylesheet>
 	</HEAD>
@@ -13,16 +13,16 @@
 <!-- 공지사항 목록 출력 -->
 <br>
 	  
- <table border=1 width=500 height=30 bordercolor=black>
+ <table align=center >
 	<tr>
-		<td align=center bgcolor=0063ce><font size=3 color=white><b>공 지 사 항</b></td>
+		<td color=black>공 지 사 항</td>
 	</tr>
   </table><br>
 
-  <table border=0 cellpadding=0 cellspacing=0 width=450>
+  <table align=center>
     <tr>
        <td>
-	    <table width=450 border=1 cellpadding=0 cellspacing=1 border color=639cce>
+	    <table >
 		<tr>
 		<th width=40 align=center nowrap bgcolor="#7eaee9"><p>번호</th>		
 		<th width=290 align=center nowrap bgcolor="#7eaee9"><p>제목</th>

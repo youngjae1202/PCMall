@@ -6,7 +6,7 @@
 		location.href="../member/login.jsp";
      </script>
 <HTML>
-	<HEAD><TITLE>컴퓨터전문쇼핑몰</TITLE>
+	<HEAD><TITLE>WebMall</TITLE>
 	</HEAD>
 	<link href="../common/u3.css" type=text/css rel=stylesheet>
 

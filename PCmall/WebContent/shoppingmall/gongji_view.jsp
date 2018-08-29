@@ -11,7 +11,7 @@
 	
 <!--  공지내용보기  -->	
 	<br>
-	  <table border=1 width=450 height=30 bordercolor=black>
+	  <table border=1 width=450 height=30 bordercolor=black align=center >
 		<tr>
 			<td align=center bgcolor=0063ce><font size=2 color=white><b>공 지 사 항</b></td>
 		</tr>

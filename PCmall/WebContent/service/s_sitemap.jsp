@@ -93,7 +93,7 @@
 <h1 align="center">쇼핑몰</h1>
 <div class="btn-group btn-group-justified" role="group" aria-label="...">
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default" onclick="location.href='../shoppingmall/gongi.jsp'">공지사항</button>
+    <button type="button" class="btn btn-default" onclick="location.href='../shoppingmall/gongji.jsp'">공지사항</button>
   </div>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-default" onclick="location.href='../shoppingmall/newproduct.jsp'">신상품 코너</button>

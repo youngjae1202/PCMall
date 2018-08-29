@@ -26,17 +26,17 @@ table {
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="../img/background.jpg" alt="Los Angeles"
+				<img src="../img/Carousel1.jpg" alt="1"
 					class="img-responsive center-block">
 			</div>
 
 			<div class="item">
-				<img src="../img/background.jpg" alt="Chicago"
+				<img src="../img/Carousel2.png" alt="2"
 					class="img-responsive center-block">
 			</div>
 
 			<div class="item">
-				<img src="../img/background.jpg" alt="New york"
+				<img src="../img/background.jpg" alt="3"
 					class="img-responsive center-block">
 			</div>
 		</div>
@@ -53,86 +53,11 @@ table {
 </div>
 
 
-
 <div class=inline>
 	<!-- 최신상품 출력  -->
 	<table align=center width="100%">
 		<div align=center>
-			<td bgcolor=white><img src="../img/NewProduct.jpg"
-				style="margin-right: auto; display: block;">
-		</div>
-	</table>
-<div id="myCarousel_product" class="carousel slide" data-ride="carousel">
-
-	<ol class="carousel-indicators">
-			<li data-target="#myCarousel_product" data-slide-to="0" class="active"></li>
-			<li data-target="#myCarousel_product" data-slide-to="1"></li>
-			<li data-target="#myCarousel_product" data-slide-to="2"></li>
-		</ol>
-			<%
-							try {
-								String name, company_id, expression, photo;
-								int id, price;
-
-								DBConnectionManager pool = DBConnectionManager.getInstance();
-								Connection con = pool.getConnection("ora8");
-								Statement stmt = con.createStatement();
-								ResultSet rs = stmt.executeQuery("select id,name,price,photo from(select * from product order by DBMS_RANDOM.RANDOM ) where rownum < 10");
-								int flag = 0;
-								while (rs.next()) {
-									id = rs.getInt(1);
-									name = rs.getString(2);
-									price = rs.getInt(3);
-									photo = rs.getString(4);
-						%>
-		<div class="carousel-inner">
-			<div class="item active">
-				<a href="../product/product.jsp?i=<%=id%>"> 
-				<img src="../product/image/<%=photo%>" width=90 height=90 border=0></a>
-				<font color=blue>&nbsp;
-				<a 	href="../product/product.jsp?i=<%=id%>">[<%=name%>]
-				</a></font><br/>&nbsp;
-				<c:set var="fmtPrice" value="<%=price%>" /> 
-				<font color=red>&nbsp;[<fmt:formatNumber value="${fmtPrice }"
-				pattern="#,###" />&nbsp;원]
-				</font>
-		
-		</div>
-
-						<%
-							}
-								rs.close();
-								stmt.close();
-								pool.freeConnection("ora8", con);
-							} catch (Exception e) {
-								out.println(e);
-							}
-						%>
-		
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class=inline>
-	<!-- 최신상품 출력  -->
-	<table align=center width="100%">
-		<div align=center>
-			<td bgcolor=white><img src="../img/NewProduct.jpg"
+			<td bgcolor=white><img src="../img/new.gif"
 				style="margin-right: auto; display: block;">
 		</div>
 	</table>
@@ -150,7 +75,7 @@ table {
 								DBConnectionManager pool = DBConnectionManager.getInstance();
 								Connection con = pool.getConnection("ora8");
 								Statement stmt = con.createStatement();
-								ResultSet rs = stmt.executeQuery("select id,name,price,photo from(select * from product order by DBMS_RANDOM.RANDOM ) where rownum < 10");
+								ResultSet rs = stmt.executeQuery("select id,name,price,photo from product where id between 3 and 7");
 								int flag = 0;
 								while (rs.next()) {
 									id = rs.getInt(1);
@@ -198,10 +123,9 @@ table {
 <!-- 베스트 상품 -->
 <tr>
 	<div align=right>
-		<td bgcolor=white><img src="../img/BestProduct.jpg"
-			style="margin-right: auto; display: block;">
+		<td bgcolor=white><img src="../img/best.gif"
+			style="margin-right: auto; display: block;"></td>
 	</div>
-	</td>
 </tr>
 <tr>
 	<td bgcolor=#dddddd><img height=1 src="" width=1></td>
@@ -220,8 +144,7 @@ table {
 
 						Statement stmt = con.createStatement();
 						ResultSet rs = stmt.executeQuery(
-								"select id,name,price,company_id,expression, photo from(select * from product order by DBMS_RANDOM.RANDOM ) where rownum < 10");
-						
+								"select id,name,price,company_id,expression,photo from product where id between 9 and 14");
 						int flag = 0;
 						while (rs.next()) {
 							id = rs.getInt(1);
@@ -270,8 +193,8 @@ table {
 <!-- 추천상품 -->
 <tr>
 	<div align=left>
-		<td bgcolor=white><img src="../img/RecommendProduct.jpg"
-			style="margin-right: auto; display: block;">
+		<td bgcolor=white><img src="../img/hot.gif"
+			style="margin-right: auto; display: block;"></td>
 	</div>
 </tr>
 <tr>
@@ -287,7 +210,7 @@ table {
 
 						Statement stmt = con.createStatement();
 						ResultSet rs = stmt.executeQuery(
-								"select id,name,price,company_id,expression,photo,code from(select * from product order by DBMS_RANDOM.RANDOM ) where rownum < 10");
+								"select id,name,price,company_id,expression,photo,code from product where category between 15 and 18");
 						while (rs.next()) {
 							id = rs.getInt(1);
 							name = rs.getString(2);

@@ -7,12 +7,15 @@
   <div align="center">
   	<hr>
     <!-- height="50" valign="middle" align="center"><font size=2 color=white><b><font color="#7373b9" -->
-	    <p align="center">상호 : (주)김정원		대표 김정원    서울특별시 송파구 올림픽로35길 104 장미씨 상가 403호 (반품주소: 05504 서울특별시 송파구 올림픽로35길 104 장미씨 상가 403호 사무실)
-		<p align="center">사업자등록번호 : 2018-08-24   통신판매업신고번호 제2018-서울송파-1004호
-		<p align="center">개인정보담당자 김한경 (kosea@naver.com)    고객센터 02)414-4456 9 AM - 6 PM (점심 1 PM- 2 PM 토,일,공휴일 휴무)
+	    <p align="center"><b>상호 </b> (주)김정원 &nbsp; &nbsp;<b>대표</b> 김정원 &nbsp; &nbsp;서울특별시 송파구 올림픽로35길 104 장미C상가 403호 <br>
+	    (<b>반품주소:</b> 05504 서울특별시 송파구 올림픽로35길 104 장미씨 상가 403호 사무실) <br>
+		<b>사업자등록번호 :</b> 2018-08-24   통신판매업신고번호 제2018-서울송파-1004호 <br>
+		<b>개인정보담당자</b> 김한경 (kosea@naver.com)<br>
+		<b>고객센터</b> 02)414-4456 9 AM - 6 PM (점심 1 PM - 2 PM <b style="color: red">토,일,공휴일 휴무</b>)</p>
 	</div> 
        <!-- </font></b><font color="#7373b9"><a href="mailto:test@test.co.kr"><b class="copyright"><font color="#990066">Webmaster</font></b></a><b>에게 메일 주세요.</b></font></td>
   </tr> -->
 <!-- </tbody> -->
 </table>
 
+ 

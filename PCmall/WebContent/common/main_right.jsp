@@ -9,7 +9,6 @@
 /* div {
 	margin: auto;
 } */
-
 table {
 	margin: auto;
 }
@@ -27,15 +26,18 @@ table {
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="../img/background.jpg"  alt="Los Angeles" class="img-responsive center-block">
+				<img src="../img/background.jpg" alt="Los Angeles"
+					class="img-responsive center-block">
 			</div>
 
 			<div class="item">
-				<img src="../img/background.jpg" alt="Chicago" class="img-responsive center-block">
+				<img src="../img/background.jpg" alt="Chicago"
+					class="img-responsive center-block">
 			</div>
 
 			<div class="item">
-				<img src="../img/background.jpg" alt="New york" class="img-responsive center-block">
+				<img src="../img/background.jpg" alt="New york"
+					class="img-responsive center-block">
 			</div>
 		</div>
 
@@ -55,7 +57,7 @@ table {
 	<!-- 최신상품 출력  -->
 	<table align=center width="100%">
 		<div align=center>
-			<td bgcolor=white><img src="../img/NewProduct.jpg"
+			<td bgcolor=white><img src="../img/new.gif"
 				style="margin-right: auto; display: block;">
 		</div>
 	</table>
@@ -121,10 +123,9 @@ table {
 <!-- 베스트 상품 -->
 <tr>
 	<div align=right>
-		<td bgcolor=white><img src="../img/BestProduct.jpg"
-			style="margin-right: auto; display: block;">
+		<td bgcolor=white><img src="../img/best.gif"
+			style="margin-right: auto; display: block;"></td>
 	</div>
-	</td>
 </tr>
 <tr>
 	<td bgcolor=#dddddd><img height=1 src="" width=1></td>
@@ -192,8 +193,8 @@ table {
 <!-- 추천상품 -->
 <tr>
 	<div align=left>
-		<td bgcolor=white><img src="../img/RecommendProduct.jpg"
-			style="margin-right: auto; display: block;">
+		<td bgcolor=white><img src="../img/hot.gif"
+			style="margin-right: auto; display: block;"></td>
 	</div>
 </tr>
 <tr>

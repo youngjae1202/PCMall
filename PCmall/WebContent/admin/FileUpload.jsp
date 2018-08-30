@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
-<title>Insert title here</title>
+<title>WebMall</title>
 
 </head>
 <BODY leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>

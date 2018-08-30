@@ -4,9 +4,11 @@
 	contentType="text/html;charset=utf-8"%>
 <%@ page import="myutil.MultiPart"%>
 <%@ page import="java.net.URLEncoder"%>
+<%@ page import="org.apache.log4j.*" %>
 
 
 <%
+Logger logger = Logger.getLogger("product_insert.jsp"); 
 
 
 try {
@@ -27,10 +29,6 @@ try {
 	String photo = multiPart.getFileName("upload_file");  
 	String newPath = application.getRealPath("/product/image/" + photo);
 	multiPart.saveFile("upload_file", newPath);
-	
-	
-	
-	
 	
 	
 	String sql = "SELECT COUNT(*) FROM PRODUCT";

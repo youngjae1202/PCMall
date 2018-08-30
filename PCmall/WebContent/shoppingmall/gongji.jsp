@@ -5,6 +5,22 @@
       <TITLE>WEB MALL</TITLE>
       <script language=JavaScript src="../common/u3.js"></script>
       <link href="../common/u3.css" type=text/css rel=stylesheet>
+      <style>
+  table {
+    width: 80%;
+    border-top:    ;
+    border-collapse: collapse;
+   margin-left: auto; 
+   margin-right: auto;
+ }
+  th, td {
+  
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
+  .table table-bordered{
+  }
+</style>
    </HEAD>
 
 <BODY leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>
@@ -12,22 +28,18 @@
    
 <!-- 공지사항 목록 출력 -->
 <br>
-    
- <table align=center>
+<div class="table-responsive">
+ <table class="table table-bordered">
    <tr>
-      <td align=center>공 지 사 항</td>
-   </tr>
-  </table><br>
-
-  <table  align=center width=450>
-    <tr>
-       <td>
-       <table width=450 border=1 cellpadding=0 cellspacing=1 border color=639cce>
-      <tr>
-      <th width=40 align=center nowrap bgcolor="#7eaee9"><p>번호</th>      
-      <th width=290 align=center nowrap bgcolor="#7eaee9"><p>제목</th>
-      <th width=120 align=center nowrap bgcolor="#7eaee9"><p>날짜</th>
-        <th width=40 align=center nowrap bgcolor="#7eaee9"><p>조회</th>
+         <td align=center bgcolor=white ><font size=3 ><b>공지 사항 게시판</b></font></td>
+      </tr>
+   </table>
+  <table border=0 cellspacing=0 cellpadding=0  bordercolor="white" >
+    <tr bgcolor=black height=21>
+      <td width=50 align=center nowrap bgcolor="white"><p>번호</td>      
+      <td width=230 align=center nowrap bgcolor="white"><p>제목</td>
+      <td width=100 align=center nowrap bgcolor="white"><p>날짜</td>
+        <td width=100 align=center nowrap bgcolor="white"><p>조회</td>
       </tr>
 <%
 try {
@@ -82,7 +94,6 @@ try {
       <td width=40 align=center><p><%=idnum%></td>
       <td width=290 align=left><p>&nbsp;
       <a href="gongji_view.jsp?bid=<%=idnum%>"><%=title%>&nbsp;</a></td>
-      
       <td width=120 align=center><p><%=cdate%></td>
       <td width=40 align=center><p><%=hits%></td>
    </tr>
@@ -94,35 +105,36 @@ try {
     pool.freeConnection("ora8", con); 
 %>
 
-   </table></td>
-  </tr>
-  
-</table></div><br>
-<p align="center">
-         <font size=2>
+   
 
 <%
    int gopage=1;
    if(mypage !=1) {
       gopage=mypage-1;
-      out.println("<a href=gongji.jsp?mypage="+gopage+"><<이전</a> ");
+      /*  out.println("<a href=gongji.jsp?mypage="+gopage+"><<이전</a> "); */ 
    } else {
-      out.println("<<이전");
+      /*  out.println("<<이전"); */
    }
 
    if(mypage!=pagecount) {
       gopage=mypage+1;
-      out.println("<a href=gongji.jsp?mypage="+gopage+">다음>></a> ");
+/*        out.println("<a href=gongji.jsp?mypage="+gopage+">다음>></a> "); */
     } else {
-      out.println("다음>>");
+/*       out.println("다음>>"); */
     }
    
    } catch(Exception e) {
      out.println(e);
    }
 %>
-  </font><a href="../shoppingmall/gongji_write_form.jsp"><img src="../board/img/m_bt10.gif" border=0 align=absmiddle></a></p>
-     
+ 
+</table>
+<table width=550 bgcolor=black>
+<td width=180 height=30 valign=middle align=right>
+<a href="../shoppingmall/gongji_write_form.jsp"><img src="../board/img/m_bt10.gif"></a></p>
+</td> 
+</table>
+</div>
 <!--  공지사항 목록 출력 끝   -->
    <jsp:include page="../common/basic_copyright.jsp" flush="true"/>
 </body>

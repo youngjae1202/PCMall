@@ -19,7 +19,7 @@
 <script type="text/javascript">
 
 function deleteConfirm(){
-	if (confirm("정말 탈퇴 하시겠습니까??") == true){    //확인
+	if (confirm("정말 삭제 하시겠습니까??") == true){    //확인
     	//document.form.submit();
 	    location.href="delete.jsp";
 	}else{   //취소

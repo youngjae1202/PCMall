@@ -4,7 +4,7 @@
 %>
 
 <HTML>
-	<HEAD><TITLE>비밀번호입력화면</TITLE>
+	<HEAD><TITLE>게시글 삭제</TITLE>
 		<link href="../ch10/m3.css" type=text/css rel=stylesheet>
 </HEAD>
 
@@ -12,7 +12,7 @@
 	<br>
 	<table cellpadding=0 cellspacing=0 border=1 width=250>
 		<tr bgcolor=black>
-			<td align=center><b><font color=white>게시물의 비밀번호를 입력하세요.</font></b></td>
+			<td align=center><b><font color=white>비밀번호를 입력하세요.</font></b></td>
 		</tr>
 		<form name="frm" method="post" action="delete.jsp">
   		<tr>

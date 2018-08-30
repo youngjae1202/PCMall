@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<title>WebMall</title>
+<title>WEB MALL</title>
 <link href="../common/u3.css" type=text/css rel=stylesheet>
 </head>
 

@@ -3,7 +3,7 @@
 
 <html>
 	<head>
-		<title>WebMall</title>
+		<title>컴퓨터 전문쇼핑몰</title>
 			<SCRIPT language=JavaScript src="../common/u3.js"></SCRIPT>
 				<LINK href="../common/u3.css" type=text/css rel=STYLESHEET>
 	</head>

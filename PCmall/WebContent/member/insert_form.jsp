@@ -70,7 +70,6 @@
 </script>
      
 <BODY>
-   <br>
    <div>
    <table width=660 height=30 align=center >
       <tr>
@@ -129,9 +128,12 @@
                 <option value="충정도">충정도
                 <option value="경상도">경상도
                 <option value="전라도">전라도
+                <option value="제주도">제주도
+                <option value="기타">기타
             </select>
          </td>                
-      </tr>      
+      </tr> 
+      <tr>     
          <td bgcolor=#F7F7F7> 우편번호</td>
          <td bgcolor=white>
             <table cellspacing=0 cellpadding=0>
@@ -168,8 +170,7 @@
          </td>
       </tr>
    </table>
-   </div>
    </form>
-   </center>
+   </div>
 </BODY>
 </HTML>

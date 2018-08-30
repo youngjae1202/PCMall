@@ -14,8 +14,8 @@
   	margin: auto;
   }
 </style>
-<%!String b_name, b_email, b_title, b_content, b_date, b_ip, mailto;
-	int b_id, b_hit, ref = 0;%>
+<%!String b_title, b_content, cdate;
+	int b_id, b_hit = 0;%>
 
 <%
 	try {
@@ -24,30 +24,22 @@
 		DBConnectionManager pool = DBConnectionManager.getInstance();
 		Connection con = pool.getConnection("ora8");
 
-		String bid = request.getParameter("b_id");
+		String bid = request.getParameter("idnum");
 
 		Statement stmt = con.createStatement();
-		stmt.executeUpdate("update re_board set b_hit=b_hit+1 where b_id=" + bid + ""); //조회수를 올린다
+		stmt.executeUpdate("update notice set hits=hits+1 where b_id=" + bid + ""); //조회수를 올린다
 
-		String sql = "select b_id, b_name, b_email, b_title, b_content, to_char(b_date,'yy-mm-dd'),b_hit, b_ip, ref, step, anslevel, pwd  from re_board where b_id= "
+		String sql = "select idnum,title,body,cdate,hits from notice where idnum= "
 				+ bid;
 
 		ResultSet rs = stmt.executeQuery(sql);
 		if (rs.next()) {
 			b_id = rs.getInt(1);
-			b_name = rs.getString(2);
-			b_email = rs.getString(3);
-			b_title = rs.getString(4);
-			b_content = rs.getString(5);
-			b_date = rs.getString(6);
-			b_hit = rs.getInt(7) + 1;
-			b_ip = rs.getString(8);
-			ref = rs.getInt(9); // 글 그룹
-			if (!b_email.equals("")) {
-				mailto = "(<font size=2><a href=mailto:" + b_email + ">" + b_email + "</a></font>)";
-			} else {
-				mailto = "";
-			}
+			b_title = rs.getString(2);
+			b_content = rs.getString(3);
+			cdate = rs.getString(4);
+			b_hit = rs.getInt(5) + 1;
+		
 		}
 		rs.close();
 
@@ -70,7 +62,7 @@
 </script>
 </head>
 
-<BODY leftmargin='0' topmargin='0' marginwidth='0' marginheight='0'>
+<BODY>
 	<jsp:include page="../common/basic_screen.jsp" flush="true" />
 
 	<br>
@@ -83,23 +75,10 @@
 		</table>
 		<br>
 		<table class="table" width="550" border="1" cellspacing="0" cellpadding="0">
-			<form method="post" name="update_form" action="update.jsp">
+			<form method="post" name="update_form" action="../shoppingmall/gongji_update.jsp">
 				<tr class="term">
-					<td width=120 align=center bgcolor=white>등록자</td>
-					<td width=170 bgcolor=ffffff>&nbsp;<input type="text" size=20
-						name="name" value="<%=b_name%>"></td>
 					<td width=120 align=center bgcolor=white>등록일</td>
-					<td width=170 bgcolor=ffffff>&nbsp;<%=b_date%></td>
-				</tr>
-				<tr class="term">
-					<td width=120 align=center bgcolor=white>E-Mail 주소</td>
-					<td colspan=3 bgcolor=ffffff>&nbsp;<input type="text" size=50
-						name="email" value="<%=b_email%>"></td>
-				</tr>
-				<tr class="term">
-					<td width=120 align=center bgcolor=white>비밀번호</td>
-					<td colspan=3 bgcolor=ffffff>&nbsp;<input type="password"
-						size=10 name="pwd"></td>
+					<td width=170 bgcolor=ffffff>&nbsp;<%=cdate%></td>
 				</tr>
 				<tr class="term">
 					<td width=120 align=center bgcolor=white>제 목</td>
@@ -120,9 +99,9 @@
 
 				<tr>
 					<td colspan=4 align=right height=25><a
-						href="javascript:go_update()"><img src="img/b_edit.gif"
+						href="javascript:go_update()"><img src="../board/img/b_edit.gif"
 							border=0></a> <a href="javascript:history.go(-1)"><img
-							src="img/b_cancel.gif" border=0></a></td>
+							src="../board/img/b_cancel.gif" border=0></a></td>
 				</tr>
 
 				<input type="hidden" name="b_id" value="<%=b_id%>">

@@ -109,7 +109,7 @@ public static String Replace(String original, String oldString, String newString
 
 %>
 <html>
-<head><title>WebMall</title>
+<head><title>WEB MALL</title>
 <script language="Javascript">
 function alrim(){
 	alert("성공적으로 등록하였습니다.")

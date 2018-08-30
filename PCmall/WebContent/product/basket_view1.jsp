@@ -13,7 +13,7 @@
 
 <HTML>
 	<HEAD>
-		<TITLE>WebMall</TITLE>
+		<TITLE>WEB MALL</TITLE>
       <link href="../common/u3.css" type=text/css rel=stylesheet>
 	</HEAD>
 

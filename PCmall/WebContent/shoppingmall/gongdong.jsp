@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<title>WebMall</title>
+<title>WEB MALL</title>
 
 <script language=Javascript>
 

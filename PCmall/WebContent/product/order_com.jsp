@@ -33,7 +33,7 @@
 %>
 
 <HTML>
-	<HEAD><TITLE>WebMall</TITLE>
+	<HEAD><TITLE>WEB MALL</TITLE>
 		<link href="../common/u3.css" type=text/css rel=stylesheet>
 	</HEAD>
 <BODY leftmargin=0 topmargin=0 marginwidth=0 marginheight=0>

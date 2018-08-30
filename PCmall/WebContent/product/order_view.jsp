@@ -2,7 +2,7 @@
 
 <HTML>
 	<HEAD>
-		<TITLE>WebMall</TITLE>
+		<TITLE>WEB MALL</TITLE>
 	<script language=JavaScript src="../common/u3.js"></script>
 	<link href="../common/u3.css" type=text/css rel=stylesheet>
 		</HEAD>

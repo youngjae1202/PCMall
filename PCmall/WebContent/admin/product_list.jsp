@@ -26,7 +26,7 @@
 
 <HTML>
 <HEAD>
-<TITLE>WebMall</TITLE>
+<TITLE>쇼핑몰</TITLE>
 </HEAD>
 <link href="../common/u3.css" type=text/css rel=stylesheet>
 
@@ -131,9 +131,7 @@
 			<tr height=22 bgcolor=ffffff onMouseOver=this.style.backgroundColor=
 				'#FFF8DE'  onMouseOut=this.style.backgroundColor='#FFFFFF'>
 				<td width=50 align=center><%= ii %></td>
-				<td width=100 align=center>
-				
-				
+				<td width=100 align=center><a href='show.jsp?b_id=<%= b_id %>'>
 						<%			
 
 				if(level>0) { 
@@ -148,7 +146,7 @@
 
 
 
-				<td width=230 align=center><a href='product_select.jsp?i=<%= b_id %>'><%=name%></td>
+				<td width=230 align=center><%=name%></td>
 				
 				<td width=100 align=center><c:set var="fmtPrice" value="<%=price%>" /> <font
 										color=black>&nbsp;<fmt:formatNumber value="${fmtPrice }"
@@ -192,9 +190,7 @@
 				if( i == pageNUM){%> <font color=black>&nbsp;<%=i%>&nbsp;</font> <% 
 				} else { 
 %> 
-
-
-			<a href='product_list.jsp?pageNUM=<%=i%>'><%=i%><a> <%
+<a href='product_list.jsp?pageNUM=<%=i%>'><%=i%><a> <%
 					}
 				 if(i >= pagecount) break;
 			 }

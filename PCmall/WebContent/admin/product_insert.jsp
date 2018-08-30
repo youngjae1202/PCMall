@@ -1,14 +1,11 @@
 <%@page import="java.util.Date"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@ page import="java.sql.*,oracle.dbpool.*,java.util.*"
-	contentType="text/html;charset=utf-8"%>
+<%@ page  import="java.sql.*,oracle.dbpool.*,java.util.*" contentType="text/html;charset=utf-8" %>
 <%@ page import="myutil.MultiPart"%>
 <%@ page import="java.net.URLEncoder"%>
-<%@ page import="org.apache.log4j.*" %>
 
 
 <%
-Logger logger = Logger.getLogger("product_insert.jsp"); 
 
 
 try {
@@ -27,9 +24,8 @@ try {
 	String expression = multiPart.getParameter("expression");
 	//파일명 이름 받기
 	String photo = multiPart.getFileName("upload_file");  
-	String newPath = application.getRealPath("/product/image/" + photo);
+	String newPath = application.getRealPath("/product/image/files/" + photo);
 	multiPart.saveFile("upload_file", newPath);
-	
 	
 	String sql = "SELECT COUNT(*) FROM PRODUCT";
 	Statement stmt=con.createStatement();
@@ -101,9 +97,9 @@ try {
 	
 	System.out.println(sql);
 %>
-<script language=javascript>
+	 <script language=javascript>
     location.href="product_list.jsp";
-     </script>
+     </script> 
 <%
 
 	} catch (Exception e) {

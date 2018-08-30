@@ -39,7 +39,7 @@
 %>	    
 
 <html>
-<head><title>WebMall</title>
+<head><title>WEB MALL</title>
 		<link href="../common/u3.css" type=text/css rel=stylesheet>
 </head>
 

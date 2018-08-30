@@ -5,7 +5,7 @@
 %>                                          
 <HTML>
 	<HEAD>
-		<TITLE>WebMall</TITLE>
+		<TITLE>WEB MALL</TITLE>
 	</HEAD>
 	<link href="../common/u3.css" type=text/css rel=stylesheet>
 

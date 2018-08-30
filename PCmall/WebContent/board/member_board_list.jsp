@@ -14,7 +14,7 @@
 
 
 <HTML>
-	<HEAD><TITLE>WebMall</TITLE>
+	<HEAD><TITLE>쇼핑몰</TITLE>
 	</HEAD>
 	<link href="../common/u3.css" type=text/css rel=stylesheet>
 

@@ -3,7 +3,7 @@
 
 <html>
 <head>
-  <title>WebMall</title>
+  <title>WEB MALL</title>
 <SCRIPT language=JavaScript src="../common/u3.js"></SCRIPT>
 <LINK href="../common/u3.css" type=text/css rel=STYLESHEET>
 </head>

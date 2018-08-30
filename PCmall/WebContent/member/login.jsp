@@ -37,7 +37,7 @@
 	<form class="form-signin" name="fname" method="post"
 		action="login_ok.jsp">
 		<div class="container">
-			
+			<table width="1536" border="1" height="500">
 				<div align="center">
 					<h2 class="form-signin-heading" color="#ffffff">WebMall</h2>
 				</div>
@@ -54,6 +54,7 @@
 				<input class="btn btn-lg btn-primary btn-block" type="reset"
 					value="Cancle" OnClick="checkInput();">
 
+			</table>
 		</div>
 	</form>
 

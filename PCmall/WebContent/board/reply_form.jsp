@@ -44,7 +44,7 @@
 %>
 
 <html>
-<head><title>WebMall</title>
+<head><title>WEB MALL</title>
 <LINK href="../common/u3.css" type=text/css rel=STYLESHEET>
 
 <script>
